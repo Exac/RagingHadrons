@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'armwrestlerbold';
+    src: url('/font/ArmWrestler-webfont.eot');
+    src: url('/font/ArmWrestler-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/font/ArmWrestler-webfont.woff') format('woff'),
+         url('/font/ArmWrestler-webfont.ttf') format('truetype'),
+         url('/font/ArmWrestler-webfont.svg#armwrestlerbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+*{font-family:"armwrestlerbold";}
+
+
