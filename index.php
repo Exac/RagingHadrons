@@ -1,28 +1,29 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8">
 <link rel="stylesheet" href="/css/main.css">
+<meta http-equiv="Refresh" content="12">
 <title>Raging Hadrons</title>
 </head>
 
 <body>
 <header>
-	<img src="/css/img/logo.png" alt="Raging Hadrons Professional Gaming"  />
-    <ul>
+	<a href="/"><img id="logo" src="/css/img/logo.png" alt="Raging Hadrons Professional Gaming"  /></a>
+    <ul id="links">
     	<li>News</li>
     	<li>Forum</li>
     	<li>Streams</li>
     	<li>Store</li>                        
     </ul>
-    <ul>
-    	<li>Starcraft 2</li>
-    	<li>DOTA 2</li>
-    	<li>League of Legends</li>
-    	<li>Battlefield 4</li>
+    <ul id="games">
+    	<li class="sc2logo">Starcraft 2</li>
+    	<li class="dota2logo">DOTA 2</li>
+    	<li class="lollogo">League of Legends</li>
+    	<li class="bf4logo">Battlefield 4</li>
 	</ul>                            
 </header>
-<section id="jumbotron">
+<section id="jumbotron" style="background-image:url('/css/img/featured.jpg');">
 	<h1>WCS Europe Challenger League Group F</h1>
 </section>
 <section id="recent_posts">
