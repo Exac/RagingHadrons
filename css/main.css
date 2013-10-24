@@ -82,5 +82,6 @@ section#jumbotron h1{
 	bottom:0xp;
 	font-size:40px;
 	text-align:center;
+	outline:2px dotted blue;
 }
 a img{outline:none;}
