@@ -24,7 +24,9 @@
 	</ul>                            
 </header>
 <section id="jumbotron" style="background-image:url('/css/img/featured.jpg');">
-	<h1>WCS Europe Challenger League Group F</h1>
+	<div class="featured_article">
+		<h1>WCS Europe Challenger League Group F</h1>
+    </div>
 </section>
 <section id="recent_posts">
 	<h2>Recent Posts</h2>
