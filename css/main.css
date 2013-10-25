@@ -90,6 +90,9 @@ header ul li:hover:after{
 	cursor:pointer !important;
 	opacity:1.00;
 }
+header ul li:active:after{
+	background:#992d07 !important;
+}
 header ul#links li,
 header ul#games li{
 	display:inline-block;
