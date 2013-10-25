@@ -68,9 +68,9 @@ header ul#games li{
 }
 section#jumbotron{
 	display:block;
+	position:relative;
 	height:300px;
 	color:#ffffff !important;
-	position:relative;
 	background-size:cover;
 	max-width:900px;
 	margin:0px auto;
@@ -78,10 +78,13 @@ section#jumbotron{
 }
 section#jumbotron h1{
 	position:absolute;
-	display:inline-block;
-	bottom:0px;
+	display:block;
+	bottom:0%;
+	width:100%;
+	height:100%;
 	font-size:40px;
 	text-align:center;
-	outline:2px dotted blue;
+	vertical-align:bottom;
+	margin:0px 5px 5px;
 }
 a img{outline:none;}
