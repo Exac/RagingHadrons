@@ -23,12 +23,12 @@
     	<li class="bf4logo">Battlefield 4</li>
 	</ul>                            
 </header>
-<section id="jumbotron" style="background-image:url('/css/img/featured.jpg');">
+<section id="jumbotron" class="full" style="background-image:url('/css/img/featured.jpg');">
 	<div class="featured_article">
 		<h1>WCS Europe Challenger League Group F</h1>
     </div>
 </section>
-<section id="recent_posts">
+<section id="recent_posts" class="half">
 	<h2>Recent Posts</h2>
     <ul>
     	<li>Is it “wrong” to enjoy anime in the west?</li>
@@ -37,7 +37,7 @@
 		<li>Equality Minister says rape victims can be equally responsible.</li>
     </ul>
 </section>
-<section id="news">
+<section id="news" class="third">
 	<h2>News</h2>
     <ul>
     	<li>WCS Europe Challenger League Group F Results</li>
@@ -51,7 +51,7 @@
 		<li>Candy Crush level 64 TIPs from RH.Epuration</li>
     </ul>
 </section>
-<section id="streams">
+<section id="streams" class="third">
 	<h2>Streams</h2>
     <ul>
     	<li>RH.Exact</li>
@@ -59,11 +59,11 @@
         <li>RH.WCS Championships</li>
     </ul>
 </section>
-<section id="about">
+<section id="about" class="half">
 	<h2>About</h2>
     <p>Raging Hadrons was founded as a Starcraft II team by six professional World of Warcraft players in 2008. Now, with a roster of 26 professional gamers spanning four games Raging Hadrons is one of the top North American teams.</p>
 </section>
-<section id="roster">
+<section id="roster" class="half">
 	<h2>Roster</h2>
     <ul>
     	<li>Epuration</li>
