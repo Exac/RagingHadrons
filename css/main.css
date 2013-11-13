@@ -127,7 +127,7 @@ a img{outline:none;}
 
 section.full,
 section.half, 
-section.third
+section.third,
 section.quarter{
 	background: rgba(255,255,250,0.30);
 	margin:0px;
