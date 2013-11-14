@@ -77,7 +77,7 @@
 </section>
 
 <footer>
-
+ &copy; Raging Hadrons <?php echo Date("Y"); ?></span>
 </footer>
 </body>
 </html>
