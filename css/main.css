@@ -103,6 +103,7 @@ div#container{
 	max-width:900px;
 	margin:0px auto;
 	padding:0px !important;
+	clear:both;
 }
 section#jumbotron{
 	display:block;
@@ -113,7 +114,7 @@ section#jumbotron{
 	max-width:900px;
 	margin:0px auto;
 	overflow:hidden;
-	clear:both;
+	clear:both !important;
 }
 section#jumbotron h1{
 	position:absolute;
@@ -140,7 +141,10 @@ section.quarter{
 	box-sizing:content-box !important;
 	float:left;
 }
-section.full{width:100%;}
-section.half{width:50%;}
-section.third{width:33.333%;}
-section.quarter{width:25%;}
+section.full{width:100%;max-width:100%;}
+section.half{width:50%;max-width:50%;}
+section.third{width:32%;max-width:33%;}
+section.quarter{width:25%;max-width:25%;}
+footer{
+	clear:both;
+}
