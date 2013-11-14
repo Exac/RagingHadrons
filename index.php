@@ -23,6 +23,7 @@
     	<li class="bf4logo">Battlefield 4</li>
 	</ul>                            
 </header>
+<div id="container">
 <section id="jumbotron" class="full" style="background-image:url('/css/img/featured.jpg');">
 	<div class="featured_article">
 		<h1>WCS Europe Challenger League Group F</h1>
@@ -75,7 +76,7 @@
         <li>LordPsychoMaster</li>
     </ul>
 </section>
-
+</div>
 <footer>
  &copy; Raging Hadrons <?php echo Date("Y"); ?></span>
 </footer>
