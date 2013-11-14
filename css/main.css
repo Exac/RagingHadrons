@@ -132,6 +132,7 @@ section.quarter{
 	background: rgba(255,255,250,0.30);
 	margin:0px;
 	box-sizing:content-box !important;
+	float:left;
 }
 section.full{width:100%;}
 section.half{width:50%;}
