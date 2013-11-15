@@ -20,6 +20,11 @@ body{
 	margin:0px;
 	padding:0px;
 }
+*{
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;  
+}
 /*
 h1,h2,h3,h4,h5,h6{
 	color:#fe832d;
@@ -100,10 +105,11 @@ header ul#games li{
 	padding:20px 20px 20px 20px;
 }
 div#container{
+	width:100%;
 	max-width:900px !important;
-	outline:2px solid red;
 	margin:0px auto;
 	padding:0px !important;
+	float:none;
 	clear:both;
 }
 section#jumbotron{
@@ -144,8 +150,9 @@ section.quarter{
 }
 section.full{width:100%;max-width:100%;}
 section.half{width:50%;max-width:50%;}
-section.third{width:32%;max-width:33%;}
+section.third{width:32%;max-width:32%;}
 section.quarter{width:25%;max-width:25%;}
 footer{
 	clear:both;
+	margin:0px auto;
 }

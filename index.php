@@ -29,7 +29,7 @@
 		<h1>WCS Europe Challenger League Group F</h1>
     </div>
 </section>
-<section id="recent_posts" class="half">
+<section id="recent_posts" class="third">
 	<h2>Recent Posts</h2>
     <ul>
     	<li>Is it “wrong” to enjoy anime in the west?</li>
