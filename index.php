@@ -32,6 +32,7 @@
         <h1>WCS Europe Challenger League Group F</h1>
     </div>
 </section>
+<div class="row">
 <section id="recent_posts" class="quarter">
 	<h2>Recent Posts</h2>
     <ul>
@@ -63,6 +64,8 @@
         <li>RH.WCS Championships</li>
     </ul>
 </section>
+</div>
+<div class="row">
 <section id="about" class="half">
 	<h2>About</h2>
     <p>Raging Hadrons was founded as a Starcraft II team by six professional World of Warcraft players in 2008. Now, with a roster of 26 professional gamers spanning four games Raging Hadrons is one of the top North American teams.</p>
@@ -79,6 +82,7 @@
         <li>LordPsychoMaster</li>
     </ul>
 </section>
+</div>
 </div>
 <footer>
  &copy; Raging Hadrons <?php echo Date("Y"); ?></span>
