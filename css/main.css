@@ -161,6 +161,10 @@ h1,h2,h3,h4,h5,h6{
 }
 a img{outline:none;}
 
+div.row{
+	clear:both !important;
+}
+
 section.full
 
 #maingrid section.full,
@@ -168,7 +172,7 @@ section.full
 #maingrid section.third,
 #maingrid section.quarter{
 	border:1px solid rgb(48,48,48);
-	background: rgba(42,25,27,0.85);
+	background: rgba(42,25,27,0.75);
 	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
 box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75); 
 	margin:10px 0px 0px 10px;
@@ -179,6 +183,13 @@ section.full{width:100%;max-width:100%;}
 section.half{width:47%;max-width:47%;}
 section.third{width:31%;max-width:31%;}
 section.quarter{width:23%;max-width:23%;}
+@media only screen and (max-width: 450px) {
+	section.full, section.half, section.quarter, section.third{
+		width:100% !important;
+		max-width:100% !important;
+		margin:0px;
+	}
+}
 #maingrid section h1,
 #maingrid section h2,
 #maingrid section h3, 
