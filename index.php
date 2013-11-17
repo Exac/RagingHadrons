@@ -85,7 +85,7 @@
 </div>
 </div>
 <footer>
- &copy; Raging Hadrons <?php echo Date("Y"); ?></span>
+ <span>&copy; Raging Hadrons <?php echo Date("Y"); ?></span>
 </footer>
 </body>
 </html>
