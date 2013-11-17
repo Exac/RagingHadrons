@@ -10,7 +10,7 @@
 }
 
 html{
-	font-family:"armwrestlerbold", sans-serif;
+	font-family:'lucida grande',tahoma,verdana,arial,sans-serif;
 }
 
 body{
@@ -179,7 +179,34 @@ section.full{width:100%;max-width:100%;}
 section.half{width:47%;max-width:47%;}
 section.third{width:31%;max-width:31%;}
 section.quarter{width:23%;max-width:23%;}
+#maingrid section h1,
+#maingrid section h2,
+#maingrid section h3, 
+#maingrid section h4, 
+#maingrid section h5, 
+#maingrid section p, 
+#maingrid section img{
+	width:100%;
+	padding:7px;
+}
+#maingrid section:hover{
+	cursor:pointer;
+	opacity:0.90;
+}
 footer{
 	clear:both;
 	margin:0px auto;
+}
+.b4{background-image:url('/css/img/hdr_b4.jpg');}
+.bdlds2{background-image:url('/css/img/hdr_bdlds2.jpg');}
+.d2{background-image:url('/css/img/hdr_d2.jpg');}
+.d3{background-image:url('/css/img/hdr_d3.jpg');}
+.dal{background-image:url('/css/img/hdr_dal.jpg');}
+.eve{background-image:url('/css/img/hdr_eve.jpg');}
+.sc2{background-image:url('/css/img/hdr_sc2.jpg');}
+.wow{background-image:url('/css/img/hdr_wow.jpg');}
+.b4,.bdlds2,.d2,.d3,.dal,.eve,.sc2,.wow{
+	height:95px;
+	width:100%;
+	background-position:center;
 }
