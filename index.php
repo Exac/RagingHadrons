@@ -23,7 +23,7 @@
     	<li class="bf4logo">Battlefield 4</li>
 	</ul>                            
 </header>
-<div id="container">
+<div id="maingrid">
 <section id="jumbotron" class="full" style="background-image:url('/css/img/featured.jpg');">
 	<div class="featured_article">
 		<div class="excerpt">
