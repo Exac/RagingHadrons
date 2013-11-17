@@ -26,10 +26,13 @@
 <div id="container">
 <section id="jumbotron" class="full" style="background-image:url('/css/img/featured.jpg');">
 	<div class="featured_article">
-		<h1>WCS Europe Challenger League Group F</h1>
+		<div class="excerpt">
+        	<p>This week's WCS qualifier saw no suprises. Fan-favourite Naniwa continues to hang onto his 16<sup>th</sup> place. With only a week to go until the World Championships, things are heating up fast...</p>
+        </div>
+        <h1>WCS Europe Challenger League Group F</h1>
     </div>
 </section>
-<section id="recent_posts" class="third">
+<section id="recent_posts" class="quarter">
 	<h2>Recent Posts</h2>
     <ul>
     	<li>Is it “wrong” to enjoy anime in the west?</li>
@@ -38,7 +41,7 @@
 		<li>Equality Minister says rape victims can be equally responsible.</li>
     </ul>
 </section>
-<section id="news" class="third">
+<section id="news" class="half">
 	<h2>News</h2>
     <ul>
     	<li>WCS Europe Challenger League Group F Results</li>
@@ -52,7 +55,7 @@
 		<li>Candy Crush level 64 TIPs from RH.Epuration</li>
     </ul>
 </section>
-<section id="streams" class="third">
+<section id="streams" class="quarter">
 	<h2>Streams</h2>
     <ul>
     	<li>RH.Exact</li>
