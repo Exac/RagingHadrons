@@ -1,0 +1,1 @@
+$(".row section:last-child").css('margin-right', '0px');

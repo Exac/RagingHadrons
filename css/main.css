@@ -164,9 +164,10 @@ section#jumbotron div.excerpt{
 	}
 }
 h1,h2,h3,h4,h5,h6{
-	color: #fe832d;
+	/*color: #fe832d;*/
+	color:#b8b8b8;
 	font-family: "armwrestlerbold", sans-serif;
-	font-size: 16px;
+	font-size: 18px;
 	text-transform:uppercase;
 }
 a img{outline:none;}
@@ -229,5 +230,5 @@ footer{
 .b4,.bdlds2,.d2,.d3,.dal,.eve,.sc2,.wow{
 	height:95px;
 	width:100%;
-	background-position:center;
+	background-position:center;;
 }

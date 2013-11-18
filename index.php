@@ -92,5 +92,7 @@
 <footer>
  <span>&copy; <?php echo Date("Y"); ?> Raging Hadrons </span>
 </footer>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="/js/main.js"></script>
 </body>
 </html>
