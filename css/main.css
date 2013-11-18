@@ -105,7 +105,8 @@ header ul#games li{
 	padding:20px 20px 20px 20px;
 }
 div#container,
-div#maingrid{
+div#maingrid,
+footer{
 	width:100%;
 	max-width:900px !important;
 	margin:0px auto;
