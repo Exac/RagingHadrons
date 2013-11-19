@@ -218,11 +218,15 @@ section.quarter{width:23%;max-width:23%;}
 }
 footer{
 	clear:both;
-	margin:0px auto;
-	background:#a68c7a;
+	margin:1em auto 0px;
+	background:#000000 url('/css/img/logo.png') no-repeat;
+	background-position:center;
+	opacity:50%;
 	color:#a8a8a8;
 	width:100% !important;
 	min-height:150px;
+	border-top-left-radius:1px;
+	border-top-right-radius:1px;
 }
 .b4{background-image:url('/css/img/hdr_b4.jpg');}
 .bdlds2{background-image:url('/css/img/hdr_bdlds2.jpg');}
