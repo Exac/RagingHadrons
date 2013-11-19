@@ -219,7 +219,8 @@ section.quarter{width:23%;max-width:23%;}
 footer{
 	clear:both;
 	margin:0px auto;
-	background:black;
+	background:#a68c7a;
+	color:#a8a8a8;
 	width:100% !important;
 	min-height:150px;
 }
