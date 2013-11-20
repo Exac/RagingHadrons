@@ -103,6 +103,7 @@ header ul#games li{
 	display:inline-block;
 	float:left;
 	padding:20px 20px 20px 20px;
+	cursor:pointer;
 }
 div#container,
 div#maingrid,
@@ -176,7 +177,9 @@ a img{outline:none;}
 div.row{
 	clear:both !important;
 }
-
+.row section:last-child{
+	margin-right:0px !important;
+}
 section.full
 
 #maingrid section.full,
