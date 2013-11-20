@@ -39,7 +39,7 @@
     <ul>
     	<li>Is it “wrong” to enjoy anime in the west?</li>
 		<li>Top 3 Junglers to master climb from Diamond II</li>
-		<li>Do you hvae a favourite number?</li>
+		<li>Do you have a favourite number?</li>
 		<li>Equality Minister says rape victims can be equally responsible.</li>
     </ul>
 </section>
