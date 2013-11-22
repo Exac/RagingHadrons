@@ -51,7 +51,7 @@
 		<li>Raging Hadrons welcomes RH.Zeffeus!</li>
 		<li>BlizzCon Calendar</li>
 		<li>1 Month Count-Down to Worlds</li>
-		<li>RH.Taeja wins $20,000 in Korea</li>
+		<li>Taeja wins $20,000 in Korea</li>
 		<li>CocaCola Gaming giveaway with Raging Hadrons</li>
 		<li>LOL World championships Analysis</li>
 		<li>Patch 5.4 changes to arena meta by RH.KillDynamite</li>
