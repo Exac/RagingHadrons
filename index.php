@@ -21,6 +21,7 @@
     	<li class="dota2logo" title="DOTA 2">DOTA 2</li>
     	<li class="lollogo" title="League of Legends">League of Legends</li>
     	<li class="bf4logo" title="Battlefield 4">Battlefield 4</li>
+        <li class="wslogo" title="Wildstar">Wildstar</li>
 	</ul>                            
 </header>
 <div id="maingrid">
