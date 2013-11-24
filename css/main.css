@@ -53,6 +53,7 @@ header .togglegames{
 	position:absolute;
 	right:5px;
 	top:5px;
+	min-width:72px;
 	padding:9px 3px;
 	border-radius:1px;
 	background:rgb(81, 79, 80);
@@ -65,7 +66,9 @@ header .togglegames:hover{
 }
 header .togglegames:after{
 	content:'\25BC';
-	margin-left:5px;
+}
+header .dd.togglegames:after{
+	content:'\25B2';
 }
 header ul#links{
 	right:50%;
@@ -121,17 +124,42 @@ header ul#games li{
 	padding:20px 20px 20px 20px;
 	cursor:pointer;
 }
+@media only screen and (min-width: 551px) {
+	/* prevent menu from being hidden when making viewport larger and menu is minimized */
+	header ul#games{
+		display:block !important;
+	}
+	header ul#games li{
+		display:inline-block !important;
+	}
+}
 @media only screen and (max-width: 550px) {
 	.togglegames{
 		display:block !important;
+		z-index:11;
 	}
-	#games ul{
+	header ul#games, header #games li{
 		display:block;
-		border-radius:1px;
-		background:#fff;
-		outline:1px solid red;
+		display:none;
 	}
-	#games li{}
+	header ul#games{
+		position:absolute;
+		left:auto !important;
+		right:5px;
+		border-radius:2px;
+		background:#000 !important;
+		top:41px;
+		z-index:10;
+		margin:0px;
+		min-width:72px;
+		overflow:hidden;
+		-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
+	}
+	header #games li{
+		float:none !important;
+		margin:5px auto !important;
+	}
 	#games .sc2logo{content:'Starcraft II';}
 	#games .bf4logo{content: 'Battlefield 4';}
 	#games .wslogo{content: 'Wildstar';}
@@ -223,7 +251,7 @@ section.full
 	border:1px solid rgb(48,48,48);
 	background: rgba(42,25,27,0.75);
 	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75); 
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75); 
 	margin:10px 0px 0px 10px;
 	box-sizing:content-box !important;
 	float:left;

@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <link rel="stylesheet" href="/css/main.css">
-<meta http-equiv="Refresh" content="12">
+<meta http-equiv="Refresh" content="120">
+<meta name="viewport" content="width=device-width">
 <title>Raging Hadrons</title>
 </head>
 
@@ -95,6 +96,6 @@
  <span>&copy; <?php echo Date("Y"); ?> Raging Hadrons </span>
 </footer>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="/js/main.js"></script>
+<script src="/js/main.js" defer></script>
 </body>
 </html>
