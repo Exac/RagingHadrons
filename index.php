@@ -17,11 +17,11 @@
     	<li>Store</li>                        
     </ul>
     <ul id="games">
-    	<li class="sc2logo" title="Starcraft 2"></li>
-    	<li class="dota2logo" title="DOTA 2"></li>
-    	<li class="lollogo" title="League of Legends"></li>
-    	<li class="bf4logo" title="Battlefield 4"></li>
-        <li class="wslogo" title="Wildstar"></li>
+    	<li class="small sc2logo" title="Starcraft 2"></li>
+    	<li class="small dota2logo" title="DOTA 2"></li>
+    	<li class="small lollogo" title="League of Legends"></li>
+    	<li class="small bf4logo" title="Battlefield 4"></li>
+        <li class="small wslogo" title="Wildstar"></li>
 	</ul>                            
 </header>
 <div id="maingrid">

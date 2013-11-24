@@ -71,7 +71,17 @@ header ul#games{
 #games .wslogo{background-position:-256px 0px;}
 #games .dota2logo{background-position:-0px 0px;}
 #games .lollogo{background-position:-128px 0px;}
-
+#games li.small{
+	background-image:url('/css/img/icons/gamesprites_small.png');
+	width:42px;
+	height:42px;
+	margin-left:20px;
+}
+#games .small.sc2logo{background-position:-42px 0px; outline:1px solid red;}
+#games .small.bf4logo{background-position:-126px 0px;}
+#games .small.wslogo{background-position:-168px 0px;}
+#games .small.dota2logo{background-position:-0px 0px;}
+#games .small.lollogo{background-position:-84px 0px;}
 header ul#links, header ul#games{
 	position:absolute;
 	display:inline-block;
