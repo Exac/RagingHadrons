@@ -60,15 +60,18 @@ header ul#games{
 	background-position:center top;
 	width:64px;
 	height:64px;
+	opacity:0.5;
+	background-image:url('/css/img/icons/gamesprites.png');
 }
-#games .sc2logo{background-image:url('/css/img/icons/sc2.gif');}
-#games .bf4logo{background-image:url('/css/img/icons/bf4.gif');}
-#games .wslogo{background-image:url('/css/img/icons/ws.gif');}
-#games .dota2logo{background-image:url('/css/img/icons/d2.gif');}
-#games .lollogo{background-image:url('/css/img/icons/lol.gif');}
-#games li{
-	content:' ';
+#games li:hover{
+	opacity:0.66;
 }
+#games .sc2logo{background-position:-64px 0px;}
+#games .bf4logo{background-position:-192px 0px;}
+#games .wslogo{background-position:-256px 0px;}
+#games .dota2logo{background-position:-0px 0px;}
+#games .lollogo{background-position:-128px 0px;}
+
 header ul#links, header ul#games{
 	position:absolute;
 	display:inline-block;
