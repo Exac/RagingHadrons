@@ -48,6 +48,25 @@ header img#logo{
 	left:50%;
 	margin-left:-73px;
 }
+header .togglegames{
+	display:none;
+	position:absolute;
+	right:5px;
+	top:5px;
+	padding:9px 3px;
+	border-radius:1px;
+	background:rgb(81, 79, 80);
+	color:#ffffff;
+	font-family: "armwrestlerbold", sans-serif;
+	cursor:pointer;
+}
+header .togglegames:hover{
+	background:rgb(91,89,90);
+}
+header .togglegames:after{
+	content:'\25BC';
+	margin-left:5px;
+}
 header ul#links{
 	right:50%;
 	margin-right:142px;
@@ -75,7 +94,8 @@ header ul#games{
 	background-image:url('/css/img/icons/gamesprites_small.png');
 	width:42px;
 	height:42px;
-	margin-left:20px;
+	margin-right:20px;
+	margin-bottom:10px;
 }
 #games .small.sc2logo{background-position:-42px 0px;}
 #games .small.bf4logo{background-position:-126px 0px;}
@@ -91,6 +111,7 @@ header ul#links, header ul#games{
 	font-size:12px;
 	color:#514f50;
 	font-family:"Mongolian Baiti", Times New Roman, serif;
+	margin-top:20px;
 }
 
 header ul#links li,
@@ -100,6 +121,24 @@ header ul#games li{
 	padding:20px 20px 20px 20px;
 	cursor:pointer;
 }
+@media only screen and (max-width: 550px) {
+	.togglegames{
+		display:block !important;
+	}
+	#games ul{
+		display:block;
+		border-radius:1px;
+		background:#fff;
+		outline:1px solid red;
+	}
+	#games li{}
+	#games .sc2logo{content:'Starcraft II';}
+	#games .bf4logo{content: 'Battlefield 4';}
+	#games .wslogo{content: 'Wildstar';}
+	#games .dota2logo{content: 'DOTA 2';}
+	#games .lollogo{content: 'League of Legends';}
+}
+
 div#container,
 div#maingrid,
 footer{
