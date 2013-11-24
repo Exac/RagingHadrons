@@ -253,7 +253,7 @@ div#container,
 div#maingrid,
 footer{
 	width:100%;
-	max-width:900px !important;
+	max-width:855px !important;
 	margin:0px auto;
 	padding:0px !important;
 	float:none;
@@ -265,7 +265,7 @@ section#jumbotron{
 	height:300px;
 	color:#ffffff !important;
 	background-size:cover;
-	max-width:900px;
+	max-width:100%;
 	margin:0px auto;
 	overflow:hidden;
 	clear:both !important;
@@ -351,9 +351,9 @@ section.full
 	float:left;
 }
 section.full{width:100%;max-width:100%;}
-section.half{width:47%;max-width:47%;}
-section.third{width:31%;max-width:31%;}
-section.quarter{width:23%;max-width:23%;}
+section.half{width:48.5%;max-width:48.5%;}
+section.third{width:32%;max-width:32%;}
+section.quarter{width:23.5%;max-width:23.5%;}
 @media only screen and (max-width: 450px) {
 	section.full, section.half, section.quarter, section.third{
 		width:100% !important;
