@@ -56,8 +56,18 @@ header ul#games{
 	left:50%;
 	margin-left:142px;
 }
-header li{
-	position:relative;
+#games li{
+	background-position:center top;
+	width:64px;
+	height:64px;
+}
+#games .sc2logo{background-image:url('/css/img/icons/sc2.gif');}
+#games .bf4logo{background-image:url('/css/img/icons/bf4.gif');}
+#games .wslogo{background-image:url('/css/img/icons/ws.gif');}
+#games .dota2logo{background-image:url('/css/img/icons/d2.gif');}
+#games .lollogo{background-image:url('/css/img/icons/lol.gif');}
+#games li{
+	content:' ';
 }
 header ul#links, header ul#games{
 	position:absolute;
@@ -69,37 +79,7 @@ header ul#links, header ul#games{
 	color:#514f50;
 	font-family:"Mongolian Baiti", Times New Roman, serif;
 }
-header ul li:after{
-	position:absolute;
-	display:block;
-	content:' ';
-	width:25%;
-	height:50%;
-	top:37%;
-	left:25%;
-	opacity:0.00;
-	border-radius:1px;
-	z-index:-1;
-	transition:0.20s all ease-in;
-}
-/*TODO: Fix for IE*/
-header ul li:hover:after{
-	position:absolute;
-	display:block;
-	content:' ';
-	width:75%;
-	height:100%;
-	top:0px;
-	left:12%;
-	background:#ffffff;
-	border-radius:1px;
-	z-index:-1;
-	cursor:pointer !important;
-	opacity:1.00;
-}
-header ul li:active:after{
-	background:#992d07 !important;
-}
+
 header ul#links li,
 header ul#games li{
 	display:inline-block;
