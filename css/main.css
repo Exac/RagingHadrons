@@ -48,26 +48,91 @@ header img#logo{
 	left:50%;
 	margin-left:-73px;
 }
-header .togglegames{
+header .togglegames,
+header .togglemenu,
+.button{
 	display:none;
 	position:absolute;
-	right:5px;
 	top:5px;
 	min-width:72px;
-	padding:9px 3px;
+	padding:9px 6px;
 	border-radius:1px;
 	background:rgb(81, 79, 80);
 	color:#ffffff;
 	font-family: "armwrestlerbold", sans-serif;
 	cursor:pointer;
+	overflow:hidden;
+	/*CODROPS*/
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	/*color: inherit;*/
+	/*background: none;*/
+	cursor: pointer;
+	/*padding: 25px 80px;*/
+	/*display: inline-block;*/
+	/*margin: 15px 30px;*/
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none;
+	/*position: relative;*/
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
 }
-header .togglegames:hover{
+header .togglegames{
+	right:5px;
+}
+header.togglemenu{
+	left:5px;
+}
+header .togglegames:hover,
+header .togglemenu:hover,
+.button:hover{
 	background:rgb(91,89,90);
+	color:#000;
+	/* CODROPS */
+	/*color: #0e83cd;*/
 }
-header .togglegames:after{
+header .togglegames:after,
+header .togglemenu:after,
+.button:after{
 	content:'\25BC';
+	/*CODROPS*/
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	width: 80%;
+	height: 0;
+	top: 50%;
+	left: 50%;
+	background: #fff;
+	opacity: 0;
+	-webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+	-moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+	-ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+	transform: translateX(-50%) translateY(-50%) rotate(45deg);
 }
-header .dd.togglegames:after{
+header .togglegames:hover:after,
+header .togglemenu:hover:after,
+.button:hover:after {
+	height: 260%;
+	opacity: 1;
+}
+
+header .togglegames:active:after,
+header .togglemenu:active:after,
+.button:active:after {
+	height: 400%;
+	opacity: 1;
+}
+
+header .dd.togglegames:after,
+header .dd.togglemenu:after{
 	content:'\25B2';
 }
 header ul#links{
@@ -85,7 +150,8 @@ header ul#games{
 	opacity:0.5;
 	background-image:url('/css/img/icons/gamesprites.png');
 }
-#games li:hover{
+#games li:hover,
+#links li:hover{
 	opacity:0.66;
 }
 #games .sc2logo{background-position:-64px 0px;}
@@ -105,7 +171,8 @@ header ul#games{
 #games .small.wslogo{background-position:-168px 0px;}
 #games .small.dota2logo{background-position:-0px 0px;}
 #games .small.lollogo{background-position:-84px 0px;}
-header ul#links, header ul#games{
+header ul#links, 
+header ul#games{
 	position:absolute;
 	display:inline-block;
 	list-style-type:none;
@@ -126,26 +193,31 @@ header ul#games li{
 }
 @media only screen and (min-width: 551px) {
 	/* prevent menu from being hidden when making viewport larger and menu is minimized */
-	header ul#games{
+	header ul#games,
+	header ul#links{
 		display:block !important;
 	}
-	header ul#games li{
+	header ul#games li,
+	header ul#links li{
 		display:inline-block !important;
 	}
 }
 @media only screen and (max-width: 550px) {
-	.togglegames{
+	.togglegames,
+	.togglemenu{
 		display:block !important;
 		z-index:11;
 	}
-	header ul#games, header #games li{
+	header ul#games, 
+	header #games li,
+	header ul#links,
+	header #links li{
 		display:block;
 		display:none;
 	}
-	header ul#games{
+	header ul#games,
+	header ul#links{
 		position:absolute;
-		left:auto !important;
-		right:5px;
 		border-radius:2px;
 		background:#000 !important;
 		top:41px;
@@ -156,9 +228,19 @@ header ul#games li{
 		-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
 		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
 	}
-	header #games li{
+	header ul#games{
+		left:auto !important;
+		right:5px;
+	}
+	header ul#links{
+		right:auto !important;
+		left:5px;
+	}
+	
+	header #games li,
+	header #links li{
 		float:none !important;
-		margin:5px auto !important;
+		margin:5px 15px !important;
 	}
 	#games .sc2logo{content:'Starcraft II';}
 	#games .bf4logo{content: 'Battlefield 4';}
@@ -201,6 +283,9 @@ section#jumbotron h1{
 	padding:0px;
 	margin:0px 0px;
 	color:#ffffff;
+}
+.darkorange,
+section#jumbotron h1{
 	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QjJFQjZDMjMzRDQ0MTFFMzhFRDZDM0Y1QjNFNTYxN0IiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QjJFQjZDMjQzRDQ0MTFFMzhFRDZDM0Y1QjNFNTYxN0IiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpCMkVCNkMyMTNENDQxMUUzOEVENkMzRjVCM0U1NjE3QiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpCMkVCNkMyMjNENDQxMUUzOEVENkMzRjVCM0U1NjE3QiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PvQq+s8AAAAPSURBVHjaYpipy54GEGAAA2QBNEGxPVIAAAAASUVORK5CYII=);
 }
 section#jumbotron div.excerpt{
@@ -242,6 +327,9 @@ div.row{
 .row section:last-child{
 	margin-right:0px !important;
 }
+.row section{
+	overflow:hidden;
+}
 section.full
 
 #maingrid section.full,
@@ -265,6 +353,10 @@ section.quarter{width:23%;max-width:23%;}
 		width:100% !important;
 		max-width:100% !important;
 		margin:0px;
+	}
+	.row section{
+		margin-left:0px !important;
+		margin-right:0px !important;		
 	}
 }
 #maingrid section h1,

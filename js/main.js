@@ -10,10 +10,20 @@ $.fn.toggleClick = function(){
     });
 };$(".togglegames").toggleClick(function() {
 	$("#games, #games li").fadeIn();
+	$("#links, #links li").fadeOut();
 	$(".togglegames").addClass('dd');
 }, function() {
 	$("#games, #games li").fadeOut();
+	$("#links, #links li").fadeOut();
 	$("header .togglegames").removeClass('dd');
+});$(".togglemenu").toggleClick(function() {
+	$("#links, #links li").fadeIn();
+	$("#games, #games li").fadeOut();
+	$(".togglemenu").addClass('dd');
+}, function() {
+	$("#links, #links li").fadeOut();
+	$("#games, #games li").fadeOut();
+	$("header .togglemenu").removeClass('dd');
 });
 
 //for non-CSS3 compliant browsers

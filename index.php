@@ -11,6 +11,7 @@
 <body>
 <header>
 	<a href="/"><img id="logo" src="/css/img/logo.png" alt="Raging Hadrons Professional Gaming"  /></a>
+    <div class="togglemenu">Menu</div>
     <ul id="links">
     	<li>News</li>
     	<li>Forum</li>
