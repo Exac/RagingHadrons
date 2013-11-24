@@ -323,6 +323,12 @@ a img{outline:none;}
 
 div.row{
 	clear:both !important;
+	clear:both;
+	height:100% !important;
+}
+div.row:after{
+	clear:both;
+	content:' ';
 }
 .row section:last-child{
 	margin-right:0px !important;

@@ -29,3 +29,15 @@ $.fn.toggleClick = function(){
 //for non-CSS3 compliant browsers
 $(".row section:last-child").css('margin-right', '0px');
 
+//make sections in a .row the same height above 550px wide
+if($(".row").width() >= 550 ){
+	var rowHeight = 0;
+	$(".row").each(function() {
+		$(this).children("section").each(function(i, e) {
+			if($(e).height() > rowHeight){
+				rowHeight = $(e).height();
+			}
+		});
+		$(this).children("section").css('height', rowHeight);
+	});	
+}
