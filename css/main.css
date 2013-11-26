@@ -171,8 +171,8 @@ header ul#games{
 #games .small.wslogo{background-position:-168px 0px;}
 #games .small.dota2logo{background-position:-0px 0px;}
 #games .small.lollogo{background-position:-84px 0px;}
-header ul#links, 
-header ul#games{
+header ul#games,
+header ul#links{
 	position:absolute;
 	display:inline-block;
 	list-style-type:none;
@@ -190,6 +190,10 @@ header ul#games li{
 	float:left;
 	padding:20px 20px 20px 20px;
 	cursor:pointer;
+}
+header ul#links li{
+	font-family: "armwrestlerbold", sans-serif;
+	padding:20px 13px;
 }
 @media only screen and (min-width: 551px) {
 	/* prevent menu from being hidden when making viewport larger and menu is minimized */
