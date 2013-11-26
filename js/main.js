@@ -42,3 +42,8 @@ if($(".row").width() >= 550 ){
 		$(this).children("section").css('height', rowHeight);
 	});	
 }
+
+//hide stream-count if zero
+if($(".stream_count").html() == "0"){
+	$(".stream_count").hide();
+}

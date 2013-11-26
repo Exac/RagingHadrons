@@ -15,7 +15,7 @@
     <ul id="links">
     	<li>News</li>
     	<li>Forum</li>
-    	<li>Streams</li>
+    	<li>Streams<span class="stream_count">0</span></li>
     	<li>Store</li>                        
     </ul>
     <div class="togglegames">Games</div>
