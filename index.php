@@ -53,7 +53,6 @@
 	<h2>News</h2>
     <ul>
     	<li>WCS Europe Challenger League Group F Results</li>
-		<li>Raging Hadrons welcomes RH.Zeffeus!</li>
 		<li>BlizzCon Calendar</li>
 		<li>1 Month Count-Down to Worlds</li>
 		<li>Taeja wins $20,000 in Korea</li>
