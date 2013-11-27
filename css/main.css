@@ -319,6 +319,14 @@ section#jumbotron div.excerpt{
 	color:#ffffff;
 	background:#000000;
 }
+section#jumbotron span.postdate{
+	opacity:0.50;
+	color:#a8a8a8;
+	font-size:0.66em;
+	text-transform:uppercase;
+	height:0.66em;
+	margin-bottom:-1em;
+}
 @media only screen and (max-width: 650px) {
 	section#jumbotron div.excerpt{
 		width:66%;

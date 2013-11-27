@@ -31,6 +31,7 @@
 <section id="jumbotron" class="full" style="background-image:url('/css/img/featured.jpg');">
 	<div class="featured_article">
 		<div class="excerpt">
+        	<span class="postdate">November 26, 2013</span>
         	<p>This week's WCS qualifier saw no suprises. Fan-favourite Naniwa continues to hang onto his 16<sup>th</sup> place. With only a week to go until the World Championships, things are heating up fast...</p>
         </div>
         <h1>WCS Europe Challenger League Group F</h1>
