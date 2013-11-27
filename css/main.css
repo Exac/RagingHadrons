@@ -275,6 +275,7 @@ footer{
 	padding:0px !important;
 	float:none;
 	clear:both;
+	overflow:hidden;
 }
 section#jumbotron{
 	display:block;
@@ -283,10 +284,12 @@ section#jumbotron{
 	color:#ffffff !important;
 	background-size:cover;
 	max-width:100%;
-	margin:0px auto;
+	margin:0px auto 0px auto;
 	overflow:hidden;
 	clear:both !important;
+	box-sizing:content-box !important;
 }
+section#jumbotron:after{clear:both; float:left;content:' ';}
 section#jumbotron h1{
 	position:absolute;
 	display:block;
