@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="/css/main.css">
 <meta http-equiv="Refresh" content="120">
 <meta name="viewport" content="width=device-width">
-<title>Raging Hadrons</title>
+<title>Raging Hadrons Professional Gaming</title>
 </head>
 
 <body>
