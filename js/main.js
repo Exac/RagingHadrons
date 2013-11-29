@@ -34,8 +34,7 @@ $(".row section:first-child").css('margin-left', '0px');
 if($(".row").width() >= 550 ){
 	var rowHeight = 0;
 	$(".row").each(function(index, v) {
-		rowHeight = 0;
-		console.log("37 " + index + " " + v); 
+		rowHeight = 0; 
 		$(v).children("section").each(function(i, e) {
 			if($(e).height() > rowHeight){
 				rowHeight = $(e).height();
