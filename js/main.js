@@ -33,13 +33,16 @@ $(".row section:first-child").css('margin-left', '0px');
 //make sections in a .row the same height above 550px wide
 if($(".row").width() >= 550 ){
 	var rowHeight = 0;
-	$(".row").each(function() {
-		$(this).children("section").each(function(i, e) {
+	$(".row").each(function(index, v) {
+		rowHeight = 0;
+		console.log("37 " + index + " " + v); 
+		$(v).children("section").each(function(i, e) {
 			if($(e).height() > rowHeight){
 				rowHeight = $(e).height();
 			}
+			
 		});
-		$(this).children("section").css('height', rowHeight);
+		$(v).children("section").css('height', rowHeight);
 	});	
 }
 
