@@ -38,37 +38,37 @@
     </div>
 </section>
 <div class="row">
-<section id="recent_posts" class="quarter">
+<section id="recent_posts" class="quarter ll">
 	<div class="dal"></div>
 	<h2>Recent Posts</h2>
     <ul>
-    	<li>Is it “wrong” to enjoy anime in the west?</li>
-		<li>Top 3 Junglers to master climb from Diamond II</li>
-		<li>Do you have a favourite number?</li>
-		<li>Equality Minister says rape victims can be equally responsible.</li>
+    	<li><a href="">Is it “wrong” to enjoy anime in the west?</a></li>
+		<li><a href="">Top 3 Junglers to master climb from Diamond II</a></li>
+		<li><a href="">Do you have a favourite number?</a></li>
+		<li><a href="">Equality Minister says rape victims can be equally responsible.</a></li>
     </ul>
 </section>
-<section id="news" class="half">
+<section id="news" class="half ll">
 	<div class="d3"></div>
 	<h2>News</h2>
     <ul>
-    	<li>WCS Europe Challenger League Group F Results</li>
-		<li>BlizzCon Calendar</li>
-		<li>1 Month Count-Down to Worlds</li>
-		<li>Taeja wins $20,000 in Korea</li>
-		<li>CocaCola Gaming giveaway with Raging Hadrons</li>
-		<li>LOL World championships Analysis</li>
-		<li>Patch 5.4 changes to arena meta by RH.KillDynamite</li>
-		<li>Candy Crush level 64 TIPs from RH.Epuration</li>
+    	<li><a href="">WCS Europe Challenger League Group F Results</a></li>
+		<li><a href="">BlizzCon Calendar</a></li>
+		<li><a href="">1 Month Count-Down to Worlds</a></li>
+		<li><a href="">Taeja wins $20,000 in Korea</a></li>
+		<li><a href="">CocaCola Gaming giveaway with Raging Hadrons</a></li>
+		<li><a href="">LOL World championships Analysis</a></li>
+		<li><a href="">Patch 5.4 changes to arena meta by RH.KillDynamite</a></li>
+		<li><a href="">Candy Crush level 64 TIPs from RH.Epuration</a></li>
     </ul>
 </section>
-<section id="streams" class="quarter">
+<section id="streams" class="quarter ll">
 	<div class="sc2"></div>
 	<h2>Streams</h2>
     <ul>
-    	<li>RH.Exact</li>
-        <li>RH.LordPsychoMaster</li>
-        <li>RH.WCS Championships</li>
+    	<li><a href="">RH.Exact</a></li>
+        <li><a href="">RH.LordPsychoMaster</a></li>
+        <li><a href="">RH.WCS Championships</a></li>
     </ul>
 </section>
 </div>
