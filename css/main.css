@@ -434,3 +434,12 @@ footer{
 	width:100%;
 	background-position:center;;
 }
+
+#recent_posts ul{
+	padding: 0px;
+	list-style-type:none;
+}
+#recent_posts li{
+	padding: 0px 7px;
+	border-top:1px solid rgb(48, 48, 48);
+}
