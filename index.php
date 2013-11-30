@@ -62,7 +62,7 @@
 		<li><a href="">Candy Crush level 64 TIPs from RH.Epuration</a></li>
     </ul>
 </section>
-<section id="streams" class="quarter ll" onClick="loadDefault()">
+<section id="streams" class="quarter ll" onClick="getStreamList()">
 	<div class="sc2"></div>
 	<h2>Streams</h2>
     <ul>

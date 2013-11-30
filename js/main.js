@@ -41,7 +41,7 @@ if($(".row").width() >= 550 ){
 			}
 			
 		});
-		$(v).children("section").css('height', rowHeight);
+		$(v).children("section").css('height', rowHeight + 2);
 	});	
 }
 
@@ -51,16 +51,16 @@ if($(".stream_count").html() == "0"){
 }
 
 //ajax testing
-function loadDefault() {
+function getStreamList() {
 	console.log("loadDefault()");
 	
 	xml = new XMLHttpRequest();
 	//will be called every time xml changes
 	xml.onreadystatechange = function() {
 		if (xml.readyState==4 && xml.status==200) {
-			$("#streams h2").html(xml.responseText);
+			$("#streams ul").append(xml.responseText);
 		}
 	}
-	xml.open("GET", "/ajax/default.php", true);
+	xml.open("GET", "/ajax/default.php?streamlist=true&streamlist_type=li", true);
 	xml.send();
 }

@@ -363,6 +363,7 @@ div.row:after{
 }
 .row section{
 	overflow:hidden;
+	overflow-y:auto;
 }
 section.full
 
