@@ -49,3 +49,18 @@ if($(".row").width() >= 550 ){
 if($(".stream_count").html() == "0"){
 	$(".stream_count").hide();
 }
+
+//ajax testing
+function loadDefault() {
+	console.log("loadDefault()");
+	
+	xml = new XMLHttpRequest();
+	//will be called every time xml changes
+	xml.onreadystatechange = function() {
+		if (xml.readyState==4 && xml.status==200) {
+			$("#streams h2").html(xml.responseText);
+		}
+	}
+	xml.open("GET", "/ajax/default.php", true);
+	xml.send();
+}
