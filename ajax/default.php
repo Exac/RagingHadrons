@@ -4,10 +4,11 @@
 echo "default.php\n";
 
 //detection
-if($_GET["streamlist"]){get_stream_list();}
+if($_GET["streamlist"]){echo get_stream_list();}
 
 //get twitch.tv streams
 function get_stream_list(){
+	$streamlist = "";
 	//default list-item is <li>
 	if(!isset($_GET["streamlist_type"])){
 		$_GET["streamlist_type"] = "li";
@@ -18,18 +19,18 @@ function get_stream_list(){
 	}
 	
 	//get list of streams IDs to show on the site
-	$streamlist_arr;
+	$streamlist_arr = array();
 	//get list of live twitch stream IDs
-	$streamlist_twitch_arr;
+	$streamlist_twitch_arr = array();
 	//match lists
-	$streamlist_live = array_intersect($streamlist_arr, $streamlist_live);
+	$streamlist_live = array_intersect($streamlist_arr, $streamlist_twitch_arr);
 	//output wrapper
 	if($_GET["streamlist_wrapper"]){
-		echo "<".$_GET["streamlist_wrapper"].">";
+		$streamlist .= "<".$_GET["streamlist_wrapper"].">";
 	}
 	foreach($streamlist_live as $livestreams){
 		//get USERNAME, USERLINK, USERLOGO
-		echo '<'.$_GET['streamlist_type'].'>'.
+		$streamlist .= '<'.$_GET['streamlist_type'].'>'.
 			 '<span class="stream_username">'.$username.'</span>'.
 			 '<span class="stream_userlogo">'.$userlogo.'</span>'.
 			 '<a class="stream_link" href="http://STREAMLINK">'.$userlink.'</a>'.
@@ -37,8 +38,10 @@ function get_stream_list(){
 	}
 	//output wrapper end-tag
 	if($_GET["streamlist_wrapper"]){
-		echo "</".$_GET["streamlist_wrapper"].">";
+		$streamlist .= "</".$_GET["streamlist_wrapper"].">";
 	}
+	
+	return $streamlist;
 }
 
 ?>
