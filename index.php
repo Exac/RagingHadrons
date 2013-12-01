@@ -34,7 +34,8 @@
         	<span class="postdate">November 26, 2013</span>
         	<p>This week's WCS qualifier saw no suprises. Fan-favourite Naniwa continues to hang onto his 16<sup>th</sup> place. With only a week to go until the World Championships, things are heating up fast...</p>
         </div>
-        <h1>WCS Europe Challenger League Group F</h1>
+        <h1>
+        WCS Europe Challenger League Group F</h1>
     </div>
 </section>
 <div class="row">
@@ -66,9 +67,6 @@
 	<div class="sc2"></div>
 	<h2>Streams</h2>
     <ul>
-    	<li><a href="">RH.Exact</a></li>
-        <li><a href="">RH.LordPsychoMaster</a></li>
-        <li><a href="">RH.WCS Championships</a></li>
     </ul>
 </section>
 </div>
@@ -100,12 +98,12 @@
 <!--<script src="https://ttv-api.s3.amazonaws.com/twitch.min.js">
 </script>-->
 <script src="/js/Twitch.min.js"></script>
+<script src="/js/main.js"></script>
 <script>
   Twitch.init({clientId: 'do17chojf6qhk12fjqnxlcgfzd1aeot'}, function(error, status) {
     //twitch client loaded
-	console.log(Twitch.baseUrl);
+	getStreamList();
   });
 </script>
-<script src="/js/main.js" defer></script>
 </body>
 </html>

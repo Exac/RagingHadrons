@@ -115,25 +115,30 @@ function get_stream_list(){
 		array()  #screen_cap_url_medium '/live_user_rhexact-320x240.jpg
 	);
 	
-	foreach($json_array as $i=>$js){
-		$streamlist_live[] = $json_array[$i]['channel']['login'];
-	}
-	
-	unset($value);
-	unset($i);
 	
 	//output wrapper
 	if($_GET["streamlist_wrapper"]){
 		$streamlist .= "<".$_GET["streamlist_wrapper"].">";
 	}
-	foreach($streamlist_live as $livestreams){
-		//get USERNAME, USERLINK, USERLOGO
-		$streamlist .= '<'.$_GET['streamlist_type'].'>'.
-			 '<span class="stream_username">'.$username.'</span>'.
-			 '<span class="stream_userlogo">'.$userlogo.'</span>'. #http://static-cdn.jtvnw.net/previews/live_user_rhexact-200x112.jpg
-			 '<a class="stream_link" href="http://STREAMLINK">'.$userlink.'</a>'.
+	
+	foreach($json_array as $i=>$js){
+		//get USERNAME, USERLINK, USERLOGO		
+		$streamlist .= '<'.$_GET['streamlist_type'].' title="'.$json_array[$i]['channel']['login'].' is live with '.(2 + $json_array[$i]['stream_count']).' viewers!">'.
+			 '<a class="stream_link" href="http://www.twitch.tv/'.
+			 $json_array[$i]['channel']['login']. '"></a>'.
+			 '<span class="stream_username">'.
+			 $json_array[$i]['channel']['login'].'</span>'.
+			 '<span class="stream_userlogo" style="background-image:url(\''.$json_array[$i]['channel']['image_url_small'].'\');">'.
+			 '</span>'.
+			 '<span class="stream_preview" style="background-image:url(\''.$json_array[$i]['channel']['screen_cap_url_medium'].'\');">'.
+			 '</span>'.
+			 '<span class="stream_game">'.
+			 $json_array[$i]['channel']['meta_game'].
+			 '</span>'.
+			 
 			 '</'.$_GET['streamlist_type'].'>';
 	}
+	
 	//output wrapper end-tag
 	if($_GET["streamlist_wrapper"]){
 		$streamlist .= "</".$_GET["streamlist_wrapper"].">";
