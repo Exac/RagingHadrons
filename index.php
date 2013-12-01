@@ -99,10 +99,11 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <!--<script src="https://ttv-api.s3.amazonaws.com/twitch.min.js">
 </script>-->
-<script src="/js/Twitch.min.js" defer></script>
+<script src="/js/Twitch.min.js"></script>
 <script>
   Twitch.init({clientId: 'do17chojf6qhk12fjqnxlcgfzd1aeot'}, function(error, status) {
     //twitch client loaded
+	console.log(Twitch.baseUrl);
   });
 </script>
 <script src="/js/main.js" defer></script>
