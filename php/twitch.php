@@ -1,57 +1,131 @@
 <?php
-
-function get_url_contents($url){
-    $crl = curl_init();
-    $timeout = 5;
-    curl_setopt ($crl, CURLOPT_URL,$url);
-    curl_setopt ($crl, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt ($crl, CURLOPT_CONNECTTIMEOUT, $timeout);
-    $ret = curl_exec($crl);
-    curl_close($crl);
-    return $ret;
-}
-
-function post_url_contents($url, $fields) {
-
-    foreach($fields as $key=>$value) { $fields_string .= $key.'='.urlencode($value).'&'; }
-    rtrim($fields_string, '&');
-
-    $crl = curl_init();
-    $timeout = 5;
-
-    curl_setopt($crl, CURLOPT_URL,$url);
-    curl_setopt($crl,CURLOPT_POST, count($fields));
-    curl_setopt($crl,CURLOPT_POSTFIELDS, $fields_string);
-
-    curl_setopt ($crl, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt ($crl, CURLOPT_CONNECTTIMEOUT, $timeout);
-    $ret = curl_exec($crl);
-    curl_close($crl);
-    return $ret;
-}
-
-//checks if player streams are online
-function onlinecheck($live, $viewers){  
-	//If the variable online is not equal to null, there is a good change this person is currently streaming
-	if ($live != null){
-		echo '<a href="http://www.twitch.tv/'.$live.'"> ".
-		"<strong>'.$live.'</strong></a>';
-		echo '&nbsp <img src="/images/online.png">".
-		"<strong> Status:</strong> Online! </br>'; 
-		echo '<img src="/images/viewers.png">".
-		"<strong>Viewers:</strong> &nbsp' .
-		$viewers.'</br>';
-	}
-}
+class Twitch {
+	private $streamlist;
 	
-//This funcion add's online channel names to the checked online array
-function signin($person){
-	if($person != null){
-		return $person;
-	}else{
-		return null;
+	public function __construct() {
+		$this->init();
+		echo $this->check_get();
+	}
+	
+	private function init() {
+		$this->streamlist = "";
+	}
+	
+	private function check_get() {
+		// streamlist
+		if(isset($_GET["streamlist"])){
+			if(isset($_GET["streamlist_type"]) && isset($_GET["streamlist_wrapper"])){
+				return $this->get_stream_list($_GET["streamlist_type"], $_GET["streamlist_wrapper"]);
+			}else if(isset($_GET["streamlist_type"])){
+				return $this->get_stream_list($_GET["streamlist_type"]);
+			}else if(isset($_GET["streamlist_wrapper"])){
+				return $this->get_stream_list($_GET["streamlist_wrapper"], false);
+			}else{
+				return $this->get_stream_list();
+			}
+		}
+	}
+	
+	private function check_post() {
+		// streamlist
+		if(isset($_POST["streamlist"])){
+			if(isset($_POST["streamlist_type"]) && isset($_POST["streamlist_wrapper"])){
+				return $this->get_stream_list($_POST["streamlist_type"], $_POST["streamlist_wrapper"]);
+			}else if(isset($_POST["streamlist_type"])){
+				return $this->get_stream_list($_POST["streamlist_type"]);
+			}else{
+				return $this->get_stream_list("li", $_POST["streamlist_wrapper"]);
+			}
+		}
+	}
+	
+	public function get_stream_list($type = "li", $wrapper = false) {
+		$streamlist = $this->streamlist;
+		
+		//get list of streams IDs to show on the site
+		$streamlist_arr = array();
+		$streamlist_arr_promoted = array();
+		
+		include_once($_SERVER["DOCUMENT_ROOT"] . "/php/sql.php");#connect to MySQL db
+	
+		$query = "select streamname, promoted from twitch_channels";
+		$result = mysql_query($query);
+		if(!$result){
+			die("<".$wrapper." style='color:red;'>".
+			mysql_error()."<br/>".$query."</".$_GET["streamlist_wrapper"].">");
+		}
+		while($row = mysql_fetch_assoc($result)){
+			$streamlist_arr[] =  $row["streamname"];
+			$streamlist_arr_promoted[] = $row["promoted"]; //BTI 0 or 1 (0=promoted)
+		}
+		
+		//get list of live twitch stream IDs
+		$streamlist_twitch_arr = array();
+		
+		$userGrab = "http://api.justin.tv/api/stream/list.json?channel=raginghadrons";
+		
+		foreach($streamlist_arr as $i =>$value){
+			$userGrab .= ",";
+			$userGrab .= $value;
+		}
+		unset($value);
+		
+		// Customize headers and get stream list
+		$opts = array(
+		  'http'=>array(
+			'method' => "GET",
+			'header' =>	"Accept-language: en\r\n" .
+						"Accept: application/vnd.twitchtv.v2+json" .
+						"x-api-version: 2\r\n".
+						"Client-ID: do17chojf6qhk12fjqnxlcgfzd1aeot\r\n"
+		  )
+		);
+		$context = stream_context_create($opts);
+		//grabs the channel data from twitch.tv streams
+		$json_file = file_get_contents($userGrab, 0, $context, null);
+		$json_array = json_decode($json_file, true);
+		
+		$streamlist_live = array( # 0,1,2...
+			array(), #login 'rhexact', 'raginghadrons'...
+			array(), #channel_url 'twitch.tv/rhexact', 'twitch.tv/mlg'
+			array(), #meta_game 'Hearthstone'
+			array(), #image_url_small 'http://profile-image-70x70.png'
+			array()  #screen_cap_url_medium '/live_user_rhexact-320x240.jpg
+		);
+		
+		
+		//output wrapper
+		if($wrapper){
+			$streamlist .= "<".$wrapper.">";
+		}
+		
+		foreach($json_array as $i=>$js){
+			//get USERNAME, USERLINK, USERLOGO		
+			$streamlist .= '<'.$type.' title="'.$json_array[$i]['channel']['login'].' is live with '.(2 + $json_array[$i]['stream_count']).' viewers!">'.
+				 '<a class="stream_link" href="http://www.twitch.tv/'.
+				 $json_array[$i]['channel']['login']. '"></a>'.
+				 '<span class="stream_username">'.
+				 $json_array[$i]['channel']['login'].'</span>'.
+				 '<span class="stream_userlogo" style="background-image:url(\''.$json_array[$i]['channel']['image_url_small'].'\');">'.
+				 '</span>'.
+				 '<span class="stream_preview" style="background-image:url(\''.$json_array[$i]['channel']['screen_cap_url_medium'].'\');">'.
+				 '</span>'.
+				 '<span class="stream_game">'.
+				 $json_array[$i]['channel']['meta_game'].
+				 '</span>'.
+				 
+				 '</'.$type.'>';
+		}
+		
+		//output wrapper end-tag
+		if($wrapper){
+			$streamlist .= "</".$wrapper.">";
+		}
+		
+		return $streamlist;
 	}
 }
+
 
 function get_stream_list(){
 	$streamlist = "";
