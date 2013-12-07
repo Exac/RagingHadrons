@@ -61,6 +61,6 @@ function getStreamList() {
 			$("#streams ul").append(xml.responseText);
 		}
 	}
-	xml.open("GET", "/ajax/default.php?streamlist=true&streamlist_type=li", true);
+	xml.open("GET", "/ajax/default.php?streamlist=true&streamlist_type=li&streamlist_wrapper=false", true);
 	xml.send();
 }
