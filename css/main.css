@@ -461,6 +461,12 @@ footer{
 	background:#992d07;
 }
 
+#streams{
+	/*overflow-y:hidden !important;*/
+}
+#streams ul{
+	margin-bottom:15px;
+}
 #streams li{
 	position:relative;
 	min-height:50px;
@@ -479,6 +485,7 @@ footer{
 	z-index:4 !important;
 }
 #streams li .stream_username{
+	height:50px;
 	left:50px;
 	font-size:25px;
 	text-transform:uppercase;

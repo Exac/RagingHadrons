@@ -31,28 +31,51 @@ $(".row section:last-child").css('margin-right', '0px');
 $(".row section:first-child").css('margin-left', '0px');
 
 //make sections in a .row the same height above 550px wide
-if($(".row").width() >= 550 ){
-	var rowHeight = 0;
-	$(".row").each(function(index, v) {
-		rowHeight = 0; 
-		$(v).children("section").each(function(i, e) {
-			if($(e).height() > rowHeight){
-				rowHeight = $(e).height();
-			}
-			
-		});
-		$(v).children("section").css('height', rowHeight + 2);
-	});	
+function normalizeRowHeight() {
+	if($(".row").width() >= 550 ){
+		var rowHeight = 0;
+		$(".row").each(function(index, v) {
+			rowHeight = 0;
+			$(v).children("section").each(function(i, e) {
+				if($(e).height() > rowHeight){
+					rowHeight = $(e).height();
+				}
+				
+			});
+			$(v).children("section").css('height', rowHeight + 2);
+		});	
+	}
+	console.log("normalizeRowHeight()");
+	checkStreamZero();
 }
+//normalizeRowHeight();
+
+$.ajax({
+	beforeSend: function(){
+	// Handle the beforeSend event
+	},
+	complete: function(){
+		console.log("ajax.complete, # of streams: " + $("#streams ul > li").size());
+		checkStreamZero();
+		normalizeRowHeight();
+	}
+});
 
 //hide stream-count if zero
-if($(".stream_count").html() == "0"){
-	$(".stream_count").hide();
+function checkStreamZero() {
+	console.log("checkStreamZero(), # of streams: " + $("#streams ul > li").size());
+	var numStreams = $("#streams ul > li").size();
+	$(".stream_count").html(numStreams);
+	if($(".stream_count").html() == "0"){
+		$(".stream_count").hide();
+	}else{
+		$(".stream_count").show();
+	}
 }
 
 //Get list of active Twitch streams
 function getStreamList() {
-	console.log("loadDefault()");
+	console.log("getStreamList()");
 	
 	xml = new XMLHttpRequest();
 	//will be called every time xml changes
@@ -61,6 +84,6 @@ function getStreamList() {
 			$("#streams ul").append(xml.responseText);
 		}
 	}
-	xml.open("GET", "/ajax/default.php?streamlist=true&streamlist_type=li&streamlist_wrapper=false", true);
+	xml.open("GET", "/ajax/default.php?streamlist=true&streamlist_type=li", true);
 	xml.send();
 }
