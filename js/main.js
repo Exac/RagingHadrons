@@ -50,7 +50,7 @@ if($(".stream_count").html() == "0"){
 	$(".stream_count").hide();
 }
 
-//ajax testing
+//Get list of active Twitch streams
 function getStreamList() {
 	console.log("loadDefault()");
 	
