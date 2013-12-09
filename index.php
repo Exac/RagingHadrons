@@ -95,8 +95,7 @@
  <span>&copy; <?php echo Date("Y"); ?> Raging Hadrons </span>
 </footer>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<!--<script src="https://ttv-api.s3.amazonaws.com/twitch.min.js">
-</script>-->
+<script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.9.1.min.js"><\/script>')</script> 
 <script src="/js/Twitch.min.js"></script>
 <script src="/js/main.js"></script>
 <script>
