@@ -333,7 +333,6 @@ section#jumbotron span.postdate{
 	}
 }
 h1,h2,h3,h4,h5,h6{
-	/*color: #fe832d;*/
 	color:#b8b8b8;
 	font-family: "armwrestlerbold", sans-serif;
 	font-size: 18px;
@@ -397,8 +396,7 @@ section.quarter{width:23.5%;max-width:23.5%;}
 	padding:7px;
 }
 #maingrid section:hover{
-	/*cursor:pointer;
-	opacity:0.90;*/
+	
 }
 footer{
 	clear:both;
@@ -454,7 +452,7 @@ footer{
 }
 
 #streams{
-	/*overflow-y:hidden !important;*/
+	
 }
 #streams ul{
 	margin-bottom:15px;
