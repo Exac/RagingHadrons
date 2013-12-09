@@ -52,7 +52,6 @@ function normalizeRowHeight() {
 
 $.ajax({
 	beforeSend: function(){
-	// Handle the beforeSend event
 	},
 	complete: function(){
 		console.log("ajax.complete, # of streams: " + $("#streams ul > li").size());
@@ -78,7 +77,6 @@ function getStreamList() {
 	console.log("getStreamList()");
 	
 	xml = new XMLHttpRequest();
-	//will be called every time xml changes
 	xml.onreadystatechange = function() {
 		if (xml.readyState==4 && xml.status==200) {
 			$("#streams ul").append(xml.responseText);
