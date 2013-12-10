@@ -477,17 +477,26 @@ footer{
 #streams li .stream_username{
 	height:50px;
 	left:50px;
-	font-size:25px;
+	right:0xp;
+	display:block;
+	font-size:18px;
 	text-transform:uppercase;
+	text-align:right;
 	color:#fff;
+	z-index:3;
+	outline:1px dotted green;
 }
 #streams li .stream_game{
-	display:inline-block;
+	display:block;
 	position:absolute;
 	bottom:0px;
-	left:50px;
+	left:0px;
+	right:0px;
 	text-transform:uppercase;
-	font-size:8px;
+	font-size:7px;
+	text-align:right;
+	background:#3d1202;
+	z-index:1;
 }
 #streams li .stream_userlogo{
 	z-index:2 !important;
