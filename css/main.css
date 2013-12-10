@@ -476,6 +476,7 @@ footer{
 }
 #streams li .stream_username{
 	font-family:"armwrestlerbold", sans-serif;
+	color: rgb(184, 184, 184);
 	height:50px;
 	left:50px;
 	right:0xp;
