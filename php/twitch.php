@@ -12,7 +12,6 @@ class Twitch {
 	}
 	
 	private function check_get() {
-		// streamlist
 		if(isset($_GET["streamlist"])){
 			if(isset($_GET["streamlist_type"]) && isset($_GET["streamlist_wrapper"])){
 				return $this->get_stream_list($_GET["streamlist_type"], $_GET["streamlist_wrapper"]);
@@ -27,7 +26,6 @@ class Twitch {
 	}
 	
 	private function check_post() {
-		// streamlist
 		if(isset($_POST["streamlist"])){
 			if(isset($_POST["streamlist_type"]) && isset($_POST["streamlist_wrapper"])){
 				return $this->get_stream_list($_POST["streamlist_type"], $_POST["streamlist_wrapper"]);
