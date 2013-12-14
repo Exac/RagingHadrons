@@ -62,13 +62,11 @@ $.ajax({
 
 //hide stream-count if zero
 function checkStreamZero() {
-	console.log("checkStreamZero(), # of streams: " + $("#streams ul > li").size());
-	var numStreams = $("#streams ul > li").size();
-	$(".stream_count").html(numStreams);
-	if($(".stream_count").html() == "0"){
-		$(".stream_count").hide();
-	}else{
-		$(".stream_count").show();
+	var num_streams = $("#streams").data("num-streams");
+	console.log("csz: " + num_streams);
+	$("#stream_count").html(num_streams);
+	if($("#stream_count").html() == "0"){
+		$("#stream_count").show();
 	}
 }
 
