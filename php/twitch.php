@@ -91,10 +91,14 @@ class Twitch {
 			array()  #screen_cap_url_medium '/live_user_rhexact-320x240.jpg
 		);
 		
+		$num_streams = 0;
+		foreach($json_array as $i=>$js){
+			$num_streams++;
+		}
 		
 		//output wrapper
 		if($wrapper){
-			$streamlist .= "<".$wrapper.">";
+			$streamlist .= "<".$wrapper." data-num-streams=\"{$num_streams}\">";
 		}
 		
 		foreach($json_array as $i=>$js){
