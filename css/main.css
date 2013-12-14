@@ -163,7 +163,7 @@ header ul#games{
 #games .small.wslogo{background-position:-168px 0px;}
 #games .small.dota2logo{background-position:-0px 0px;}
 #games .small.lollogo{background-position:-84px 0px;}
-#links .stream_count{
+#links #stream_count{
 	background:rgb(81, 79, 80);
 	border-radius:50%;
 	color:#000000;
