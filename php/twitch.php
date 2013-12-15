@@ -42,7 +42,6 @@ class Twitch {
 		
 		//get list of streams IDs to show on the site
 		$streamlist_arr = array();
-		$streamlist_arr_promoted = array();
 		
 		include_once($_SERVER["DOCUMENT_ROOT"] . "/php/sql.php");#connect to MySQL db
 	
@@ -54,7 +53,6 @@ class Twitch {
 		}
 		while($row = mysql_fetch_assoc($result)){
 			$streamlist_arr[] =  $row["streamname"];
-			$streamlist_arr_promoted[] = $row["promoted"]; //BTI 0 or 1 (0=promoted)
 		}
 		
 		//get list of live twitch stream IDs
@@ -141,7 +139,6 @@ function get_stream_list(){
 	
 	//get list of streams IDs to show on the site
 	$streamlist_arr = array();
-	$streamlist_arr_promoted = array();
 	
 	include_once($_SERVER["DOCUMENT_ROOT"] . "/php/sql.php");#connect to MySQL db
 	
@@ -153,7 +150,6 @@ function get_stream_list(){
 	}
 	while($row = mysql_fetch_assoc($result)){
 		$streamlist_arr[] =  $row["streamname"];
-		$streamlist_arr_promoted[] = $row["promoted"]; //BTI 0 or 1 (0=promoted)
 	}
 	
 	//get list of live twitch stream IDs
