@@ -62,11 +62,13 @@ $.ajax({
 
 //hide stream-count if zero
 function checkStreamZero() {
-	var num_streams = $("#streams").data("num-streams");
+	var num_streams = $("#num_streams").data("num-streams");
 	console.log("csz: " + num_streams);
 	$("#stream_count").html(num_streams);
 	if($("#stream_count").html() == "0"){
-		$("#stream_count").show();
+		$("#stream_count").hide().css("opacity", "0.0");
+	}else{
+		$("#stream_count").css("opacity", "1.0").show();
 	}
 }
 
@@ -77,7 +79,8 @@ function getStreamList() {
 	xml = new XMLHttpRequest();
 	xml.onreadystatechange = function() {
 		if (xml.readyState==4 && xml.status==200) {
-			$("#streams ul").append(xml.responseText);
+			$("#streams ul").html(xml.responseText);
+			checkStreamZero();
 		}
 	}
 	xml.open("GET", "/ajax/default.php?streamlist=true&streamlist_type=li", true);

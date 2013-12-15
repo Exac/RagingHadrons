@@ -98,7 +98,7 @@
 <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.9.1.min.js"><\/script>')</script> 
 <script src="/js/Twitch.min.js"></script>
 <script src="/js/main.js"></script>
-<script>
+<script defer>
   Twitch.init({clientId: 'do17chojf6qhk12fjqnxlcgfzd1aeot'}, function(error, status) {
     //twitch client loaded
 	getStreamList();

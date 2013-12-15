@@ -91,17 +91,14 @@ class Twitch {
 			array()  #screen_cap_url_medium '/live_user_rhexact-320x240.jpg
 		);
 		
+		//output wrapper
+		if($wrapper){
+			$streamlist .= "<".$wrapper.">";
+		}
+		
 		$num_streams = 0;
 		foreach($json_array as $i=>$js){
 			$num_streams++;
-		}
-		
-		//output wrapper
-		if($wrapper){
-			$streamlist .= "<".$wrapper." data-num-streams=\"{$num_streams}\">";
-		}
-		
-		foreach($json_array as $i=>$js){
 			//get USERNAME, USERLINK, USERLOGO		
 			$streamlist .= '<'.$type.' title="'.$json_array[$i]['channel']['login'].' is live with '.(2 + $json_array[$i]['stream_count']).' viewers!">'.
 				 '<a class="stream_link" href="http://www.twitch.tv/'.
@@ -123,6 +120,8 @@ class Twitch {
 		if($wrapper){
 			$streamlist .= "</".$wrapper.">";
 		}
+		
+		$streamlist .= "<{$type} style=\"display:none;\" id=\"num_streams\" data-num-streams=\"{$num_streams}\"></{$type}>";
 		
 		return $streamlist;
 	}
