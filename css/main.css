@@ -151,6 +151,7 @@ header ul#games{
 #games .wslogo{background-position:-256px 0px;}
 #games .dota2logo{background-position:-0px 0px;}
 #games .lollogo{background-position:-128px 0px;}
+#games .sclogo{background-position:-128px 0px;}
 #games li.small{
 	background-image:url('/css/img/icons/gamesprites_small.png');
 	width:42px;
@@ -163,6 +164,7 @@ header ul#games{
 #games .small.wslogo{background-position:-168px 0px;}
 #games .small.dota2logo{background-position:-0px 0px;}
 #games .small.lollogo{background-position:-84px 0px;}
+#games .small.sclogo{background-position:-84px 0px;}
 #links #stream_count{
 	background:rgb(81, 79, 80);
 	border-radius:50%;
