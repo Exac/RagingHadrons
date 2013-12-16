@@ -25,6 +25,7 @@
     	<li class="small lollogo" title="League of Legends"></li>
     	<li class="small bf4logo" title="Battlefield 4"></li>
         <!--<li class="small wslogo" title="Wildstar"></li>-->
+        <!--<li class="small sclogo" title="Star Citizen"></li>-->
 	</ul>                            
 </header>
 <div id="maingrid">
