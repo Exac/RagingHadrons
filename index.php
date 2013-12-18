@@ -1,109 +1,205 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<link rel="stylesheet" href="/css/main.css">
-<meta http-equiv="Refresh" content="120">
-<meta name="viewport" content="width=device-width">
-<title>Raging Hadrons Professional Gaming</title>
-</head>
+<?php
 
-<body>
-<header>
-	<a href="/"><img id="logo" src="/css/img/logo.png" alt="Raging Hadrons Professional Gaming"  /></a>
-    <div class="togglemenu">Menu</div>
-    <ul id="links">
-    	<li>News</li>
-    	<li>Forum</li>
-    	<li>Streams<span id="stream_count">0</span></li>
-    	<li>Store</li>                        
-    </ul>
-    <div class="togglegames">Games</div>
-    <ul id="games">
-    	<li class="small sc2logo" title="Starcraft 2"></li>
-    	<li class="small dota2logo" title="DOTA 2"></li>
-    	<li class="small lollogo" title="League of Legends"></li>
-    	<li class="small bf4logo" title="Battlefield 4"></li>
-        <!--<li class="small wslogo" title="Wildstar"></li>-->
-        <!--<li class="small sclogo" title="Star Citizen"></li>-->
-	</ul>                            
-</header>
-<div id="maingrid">
-<section id="jumbotron" class="full" style="background-image:url('/css/img/featured.jpg');">
-	<div class="featured_article">
-		<div class="excerpt">
-        	<span class="postdate">November 26, 2013</span>
-        	<p>This week's WCS qualifier saw no suprises. Fan-favourite Naniwa continues to hang onto his 16<sup>th</sup> place. With only a week to go until the World Championships, things are heating up fast...</p>
-        </div>
-        <h1>
-        WCS Europe Challenger League Group F</h1>
-    </div>
-</section>
-<div class="row">
-<section id="recent_posts" class="quarter ll">
-	<div class="dal"></div>
-	<h2>Recent Posts</h2>
-    <ul>
-    	<li><a href="">Is it “wrong” to enjoy anime in the west?</a></li>
-		<li><a href="">Top 3 Junglers to master climb from Diamond II</a></li>
-		<li><a href="">Do you have a favourite number?</a></li>
-		<li><a href="">Equality Minister says rape victims can be equally responsible.</a></li>
-    </ul>
-</section>
-<section id="news" class="half ll">
-	<div class="d3"></div>
-	<h2>News</h2>
-    <ul>
-    	<li><a href="">WCS Europe Challenger League Group F Results</a></li>
-		<li><a href="">BlizzCon Calendar</a></li>
-		<li><a href="">1 Month Count-Down to Worlds</a></li>
-		<li><a href="">Taeja wins $20,000 in Korea</a></li>
-		<li><a href="">CocaCola Gaming giveaway with Raging Hadrons</a></li>
-		<li><a href="">LOL World championships Analysis</a></li>
-		<li><a href="">Patch 5.4 changes to arena meta by RH.KillDynamite</a></li>
-		<li><a href="">Candy Crush level 64 TIPs from RH.Epuration</a></li>
-    </ul>
-</section>
-<section id="streams" class="quarter ll" onClick="getStreamList()">
-	<div class="sc2"></div>
-	<h2>Streams</h2>
-    <ul>
-    </ul>
-</section>
-</div>
-<div class="row">
-<section id="about" class="half">
-	<div class="bdlds2"></div>
-	<h2>About</h2>
-    <p>Raging Hadrons was founded as a Starcraft II team by six professional World of Warcraft players in 2008. Now, with a roster of 26 professional gamers spanning four games Raging Hadrons is one of the top North American teams.</p>
-</section>
-<section id="roster" class="half">
-	<div class="d2"></div>
-	<h2>Roster</h2>
-    <ul>
-    	<li>Epuration</li>
-        <li>Exac</li>
-        <li>Killdynamite</li>
-        <li>ToySoldier</li>
-        <li>Valendrian</li>
-        <li>Zeffeus</li>
-        <li>LordPsychoMaster</li>
-    </ul>
-</section>
-</div>
-</div>
-<footer>
- <span>&copy; <?php echo Date("Y"); ?> Raging Hadrons </span>
-</footer>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.9.1.min.js"><\/script>')</script> 
-<script src="/js/Twitch.min.js"></script>
-<script src="/js/main.js"></script>
-<script defer>
-  Twitch.init({clientId: 'do17chojf6qhk12fjqnxlcgfzd1aeot'}, function(error, status) {
-    //twitch client loaded
-	getStreamList();
-  });
-</script>
-</body>
-</html>
+/*
+ *---------------------------------------------------------------
+ * APPLICATION ENVIRONMENT
+ *---------------------------------------------------------------
+ *
+ * You can load different configurations depending on your
+ * current environment. Setting the environment also influences
+ * things like logging and error reporting.
+ *
+ * This can be set to anything, but default usage is:
+ *
+ *     development
+ *     testing
+ *     production
+ *
+ * NOTE: If you change these, also change the error_reporting() code below
+ *
+ */
+	define('ENVIRONMENT', 'development');
+/*
+ *---------------------------------------------------------------
+ * ERROR REPORTING
+ *---------------------------------------------------------------
+ *
+ * Different environments will require different levels of error reporting.
+ * By default development will show errors but testing and live will hide them.
+ */
+
+if (defined('ENVIRONMENT'))
+{
+	switch (ENVIRONMENT)
+	{
+		case 'development':
+			error_reporting(E_ALL);
+		break;
+	
+		case 'testing':
+		case 'production':
+			error_reporting(0);
+		break;
+
+		default:
+			exit('The application environment is not set correctly.');
+	}
+}
+
+/*
+ *---------------------------------------------------------------
+ * SYSTEM FOLDER NAME
+ *---------------------------------------------------------------
+ *
+ * This variable must contain the name of your "system" folder.
+ * Include the path if the folder is not in the same  directory
+ * as this file.
+ *
+ */
+	$system_path = 'system';
+
+/*
+ *---------------------------------------------------------------
+ * APPLICATION FOLDER NAME
+ *---------------------------------------------------------------
+ *
+ * If you want this front controller to use a different "application"
+ * folder then the default one you can set its name here. The folder
+ * can also be renamed or relocated anywhere on your server.  If
+ * you do, use a full server path. For more info please see the user guide:
+ * http://codeigniter.com/user_guide/general/managing_apps.html
+ *
+ * NO TRAILING SLASH!
+ *
+ */
+	$application_folder = 'application';
+
+/*
+ * --------------------------------------------------------------------
+ * DEFAULT CONTROLLER
+ * --------------------------------------------------------------------
+ *
+ * Normally you will set your default controller in the routes.php file.
+ * You can, however, force a custom routing by hard-coding a
+ * specific controller class/function here.  For most applications, you
+ * WILL NOT set your routing here, but it's an option for those
+ * special instances where you might want to override the standard
+ * routing in a specific front controller that shares a common CI installation.
+ *
+ * IMPORTANT:  If you set the routing here, NO OTHER controller will be
+ * callable. In essence, this preference limits your application to ONE
+ * specific controller.  Leave the function name blank if you need
+ * to call functions dynamically via the URI.
+ *
+ * Un-comment the $routing array below to use this feature
+ *
+ */
+	// The directory name, relative to the "controllers" folder.  Leave blank
+	// if your controller is not in a sub-folder within the "controllers" folder
+	// $routing['directory'] = '';
+
+	// The controller class file name.  Example:  Mycontroller
+	// $routing['controller'] = '';
+
+	// The controller function you wish to be called.
+	// $routing['function']	= '';
+
+
+/*
+ * -------------------------------------------------------------------
+ *  CUSTOM CONFIG VALUES
+ * -------------------------------------------------------------------
+ *
+ * The $assign_to_config array below will be passed dynamically to the
+ * config class when initialized. This allows you to set custom config
+ * items or override any default config values found in the config.php file.
+ * This can be handy as it permits you to share one application between
+ * multiple front controller files, with each file containing different
+ * config values.
+ *
+ * Un-comment the $assign_to_config array below to use this feature
+ *
+ */
+	// $assign_to_config['name_of_config_item'] = 'value of config item';
+
+
+
+// --------------------------------------------------------------------
+// END OF USER CONFIGURABLE SETTINGS.  DO NOT EDIT BELOW THIS LINE
+// --------------------------------------------------------------------
+
+/*
+ * ---------------------------------------------------------------
+ *  Resolve the system path for increased reliability
+ * ---------------------------------------------------------------
+ */
+
+	// Set the current directory correctly for CLI requests
+	if (defined('STDIN'))
+	{
+		chdir(dirname(__FILE__));
+	}
+
+	if (realpath($system_path) !== FALSE)
+	{
+		$system_path = realpath($system_path).'/';
+	}
+
+	// ensure there's a trailing slash
+	$system_path = rtrim($system_path, '/').'/';
+
+	// Is the system path correct?
+	if ( ! is_dir($system_path))
+	{
+		exit("Your system folder path does not appear to be set correctly. Please open the following file and correct this: ".pathinfo(__FILE__, PATHINFO_BASENAME));
+	}
+
+/*
+ * -------------------------------------------------------------------
+ *  Now that we know the path, set the main path constants
+ * -------------------------------------------------------------------
+ */
+	// The name of THIS file
+	define('SELF', pathinfo(__FILE__, PATHINFO_BASENAME));
+
+	// The PHP file extension
+	// this global constant is deprecated.
+	define('EXT', '.php');
+
+	// Path to the system folder
+	define('BASEPATH', str_replace("\\", "/", $system_path));
+
+	// Path to the front controller (this file)
+	define('FCPATH', str_replace(SELF, '', __FILE__));
+
+	// Name of the "system folder"
+	define('SYSDIR', trim(strrchr(trim(BASEPATH, '/'), '/'), '/'));
+
+
+	// The path to the "application" folder
+	if (is_dir($application_folder))
+	{
+		define('APPPATH', $application_folder.'/');
+	}
+	else
+	{
+		if ( ! is_dir(BASEPATH.$application_folder.'/'))
+		{
+			exit("Your application folder path does not appear to be set correctly. Please open the following file and correct this: ".SELF);
+		}
+
+		define('APPPATH', BASEPATH.$application_folder.'/');
+	}
+
+/*
+ * --------------------------------------------------------------------
+ * LOAD THE BOOTSTRAP FILE
+ * --------------------------------------------------------------------
+ *
+ * And away we go...
+ *
+ */
+require_once BASEPATH.'core/CodeIgniter.php';
+
+/* End of file index.php */
+/* Location: ./index.php */
