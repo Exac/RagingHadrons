@@ -441,7 +441,7 @@ footer{
 }
 .ll li,
 #recent_posts li{
-	padding: 0px 0px;
+	padding:0px;
 	margin:3px 7px;
 	background:rgba(42, 25, 27, 1.0);
 }
@@ -453,6 +453,7 @@ footer{
 	width:100%;
 	display:block;
 	transition:all ease-in-out 0.12s;
+	padding: 5px 0px 5px 3px;
 }
 .ll li a:hover,
 #recent_posts li a:hover{
