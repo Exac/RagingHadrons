@@ -1,3 +1,34 @@
+
+$('a').click( function(ev){
+	ev.preventDefault();
+	var $self=$(this);
+	drapes($(this)); 
+ });
+ 
+ //animate drapes
+function drapes($lnk) {
+	console.log($lnk);
+	var h1 = 1296;
+	var dir = "-";
+	if(typeof $lnk != 'undefined') {
+		h1 = 0;
+		dir = "+";
+	}
+	$('#drapes')
+        .css({"height":h1})
+        .delay(200)
+        .animate({height:dir+"=1296"}, "fast", function(){
+			if(typeof $lnk != 'undefined'){
+				if($lnk.context.hash != '') {
+					location.hash = $lnk.context.hash;
+					$(this).animate({height:0});
+				}else{
+					document.location.href = $lnk.attr('href'); //actual link
+				}
+			}
+		});
+}
+
 //RESPONSIVE under 550px width, games menu:
 //TOGGLECLICK, extends jQuery
 $.fn.toggleClick = function(){
@@ -86,3 +117,8 @@ function getStreamList() {
 	xml.open("GET", "/ajax/default.php?streamlist=true&streamlist_type=li", true);
 	xml.send();
 }
+
+$(document).ready(function() {
+    
+	drapes();
+});
