@@ -135,6 +135,59 @@ header ul#games{
 	left:50%;
 	margin-left:142px;
 }
+.techbar{
+	width:100%;
+	height:12px;
+	background-image:url("/css/img/techbar.png");
+	background-position:0px 36px;
+	position:relative;
+	margin-bottom:-4px;
+	z-index:10;
+	color:#504f50;
+}
+.techbar:before,
+.techbar:after{
+	width:25%;
+	height:12px;
+	display:block;
+	content:" ";
+	position:absolute;
+	background-image:inherit;
+}
+.techbar:before{
+	left:0px;
+	background-position:0px 0px;
+}
+.techbar:after{
+	right:0px;
+	background-position:0px 12px;
+}
+.techbar .r,
+.techbar .l{
+	height:12px;
+	width:7px;
+	background-image:inherit;
+	position:absolute;
+}
+.techbar .l{
+	left:25%;
+	background-position:0px 48px;
+}
+.techbar .r{
+	right:25%;
+	background-position:0px 24px;
+}
+.techbar #drapes{
+	display:block;
+	z-index:11;
+	position:absolute;
+	width:100%;
+	background-color:#504f50;
+	background-image:url("http://www.bwen.com/sites/all/modules/custom/seed_sbase/img/loading-squares.gif");
+	background-size:cover;
+	top:6px;
+}
+
 #games li{
 	background-position:center top;
 	width:64px;
