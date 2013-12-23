@@ -21,6 +21,11 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('template_welcome');
 	}
+	
+	public function template_dir($one = "1", $two = "2", $three = "3", $four = "4")
+	{
+		echo "inner/{$one}/{$two}/{$three}/{$four}";
+	}
 }
 
 /* End of file welcome.php */
