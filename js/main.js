@@ -7,7 +7,6 @@ $('a').click( function(ev){
  
  //animate drapes
 function drapes($lnk) {
-	console.log($lnk);
 	var h1 = 1296;
 	var dir = "-";
 	if(typeof $lnk != 'undefined') {
@@ -76,7 +75,6 @@ function normalizeRowHeight() {
 			$(v).children("section").css('height', rowHeight + 2);
 		});	
 	}
-	console.log("normalizeRowHeight()");
 	checkStreamZero();
 }
 //normalizeRowHeight();
@@ -85,7 +83,6 @@ $.ajax({
 	beforeSend: function(){
 	},
 	complete: function(){
-		console.log("ajax.complete, # of streams: " + $("#streams ul > li").size());
 		checkStreamZero();
 		normalizeRowHeight();
 	}
@@ -94,7 +91,6 @@ $.ajax({
 //hide stream-count if zero
 function checkStreamZero() {
 	var num_streams = $("#num_streams").data("num-streams");
-	console.log("csz: " + num_streams);
 	$("#stream_count").html(num_streams);
 	if($("#stream_count").html() == "0"){
 		$("#stream_count").hide().css("opacity", "0.0");
@@ -105,8 +101,6 @@ function checkStreamZero() {
 
 //Get list of active Twitch streams
 function getStreamList() {
-	console.log("getStreamList()");
-	
 	xml = new XMLHttpRequest();
 	xml.onreadystatechange = function() {
 		if (xml.readyState==4 && xml.status==200) {
