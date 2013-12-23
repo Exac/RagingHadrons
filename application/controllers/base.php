@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Base extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -22,7 +22,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('template_welcome');
 	}
 	
-	public function template_dir($one = "1", $two = "2", $three = "3", $four = "4")
+	public function template($one = "1", $two = "2", $three = "3", $four = "4")
 	{
 		echo "inner/{$one}/{$two}/{$three}/{$four}";
 	}
