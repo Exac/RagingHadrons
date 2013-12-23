@@ -12,10 +12,10 @@
 <header> <a href="/"><img id="logo" src="/css/img/logo.png" alt="Raging Hadrons Professional Gaming"  /></a>
   <div class="togglemenu">Menu</div>
   <ul id="links">
-    <li>News</li>
-    <li>Forum</li>
-    <li>Streams<span id="stream_count">0</span></li>
-    <li>Store</li>
+    <li><a href="/news/">News</a></li>
+    <li><a href="/forum/">Forum</a></li>
+    <li><a href="/streams/">Streams</a><span id="stream_count">0</span></li>
+    <li><a href="/store/">Store</a></li>
   </ul>
   <div class="togglegames">Games</div>
   <ul id="games">
