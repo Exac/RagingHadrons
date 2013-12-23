@@ -47,11 +47,11 @@
 
 $active_group = 'default';
 $active_record = TRUE;
-
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = '';
-$db['default']['password'] = '';
-$db['default']['database'] = '';
+include_once($_SERVER["DOCUMENT_ROOT"] . "/php/sql_secret.php");
+$db['default']['hostname'] = 'raginghadrons.db.10405771.hostedresource.com';
+$db['default']['username'] = 'raginghadrons';
+$db['default']['password'] = $sqlpw;
+$db['default']['database'] = 'raginghadrons';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
