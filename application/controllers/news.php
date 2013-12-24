@@ -17,12 +17,20 @@ class News extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
+	public function index() #/news/
 	{
-		$this->load->view('template_welcome');
+		$this->load->view('v_temp_head');
+		
+		$this->load->model('M_news_article', '', TRUE);#load database too
+		
+		//this is the main /news page, so we will load the most recent news article here.
+		
+		
+		
+		$this->load->view('v_temp_foot');
 	}
 	
-	public function template($one = "1", $two = "2", $three = "3", $four = "4")
+	public function article($number = "1") #/news/article/8
 	{
 		echo "inner/{$one}/{$two}/{$three}/{$four}";
 	}
