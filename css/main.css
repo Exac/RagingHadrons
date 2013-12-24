@@ -10,7 +10,12 @@
     font-style: normal;
 }
 
-html{
+html,
+button,
+input,
+select,
+textarea {
+    color: #a68c7a;
 	font-family:'lucida grande',tahoma,verdana,arial,sans-serif;
 }
 
@@ -20,13 +25,59 @@ body{
 	color:#a68c7a;
 	margin:0px;
 	padding:0px;
-	font-size:14px;
+	font-size: 1em;
+    line-height: 1.4;
 }
+
 *{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;  
 }
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.chromeframe {
+    padding: 0.2em 0;
+	margin: 10px;
+	border: 1px solid rgb(48, 48, 48);
+	-webkit-box-shadow: 0 0 8px #4F5155;
+	color:rgb(166, 140, 122);
+	background-color:rgba(42, 25, 27, 0.75);
+	background-color:rgb(42,25,27);
+}
+
 a{
 	color:#ffffff;
 }
@@ -586,4 +637,75 @@ footer{
 	height:100%;
 	opacity:0.33;
 	z-index:1 !important;
+}
+
+* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
 }
