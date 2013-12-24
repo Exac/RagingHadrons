@@ -1,37 +1,4 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<link rel="stylesheet" href="/css/main.css">
-<meta http-equiv="Refresh" content="120">
-<meta name="viewport" content="width=device-width">
-<title>Raging Hadrons Professional Gaming</title>
-</head>
 
-<body>
-<header> <a href="/"><img id="logo" src="/css/img/logo.png" alt="Raging Hadrons Professional Gaming"  /></a>
-  <div class="togglemenu">Menu</div>
-  <ul id="links">
-    <li><a href="/news/">News</a></li>
-    <li><a href="/forum/">Forum</a></li>
-    <li><a href="/streams/">Streams</a><span id="stream_count">0</span></li>
-    <li><a href="/store/">Store</a></li>
-  </ul>
-  <div class="togglegames">Games</div>
-  <ul id="games">
-    <li class="small sc2logo" title="Starcraft 2"></li>
-    <li class="small dota2logo" title="DOTA 2"></li>
-    <li class="small lollogo" title="League of Legends"></li>
-    <li class="small bf4logo" title="Battlefield 4"></li>
-    <!--<li class="small wslogo" title="Wildstar"></li>--> 
-    <!--<li class="small sclogo" title="Star Citizen"></li>-->
-  </ul>
-</header>
-<div class="techbar">
-  <div class="r"></div>
-  <div class="l"></div>
-  <div id="drapes"></div>
-</div>
 <div id="maingrid">
   <section id="jumbotron" class="full" style="background-image:url('/css/img/featured.jpg');">
     <div class="featured_article">
@@ -94,16 +61,3 @@
     </section>
   </div>
 </div>
-<footer> <span>&copy; <?php echo Date("Y"); ?> Raging Hadrons </span> </footer>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
-<script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.9.1.min.js"><\/script>')</script> 
-<script src="/js/Twitch.min.js"></script> 
-<script src="/js/main.js"></script> 
-<script defer>
-  Twitch.init({clientId: 'do17chojf6qhk12fjqnxlcgfzd1aeot'}, function(error, status) {
-    //twitch client loaded
-	getStreamList();
-  });
-</script>
-</body>
-</html>
