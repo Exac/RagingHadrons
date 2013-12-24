@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Base extends CI_Controller {
+class C_index extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -19,7 +19,12 @@ class Base extends CI_Controller {
 	 */
 	public function index()
 	{
+		$this->load->view('v_temp_head');
+		
+		$this->load->model('M_maingrid_factory', '', TRUE);#load database too
+		
 		$this->load->view('template_welcome');
+		$this->load->view('v_temp_foot');
 	}
 	
 	public function template($one = "1", $two = "2", $three = "3", $four = "4")

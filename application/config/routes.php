@@ -38,7 +38,7 @@
 |
 */
 
-$route['default_controller'] = "base";
+$route['default_controller'] = "C_index";
 $route['404_override'] = '';
 
 
