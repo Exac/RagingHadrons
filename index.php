@@ -1,5 +1,5 @@
 <?php
-
+if($_SERVER["SERVER_NAME"] != "localhost" && $_SERVER["SERVER_NAME"] != "127.0.0.1" && $_SERVER["SERVER_NAME"] != "10.0.1.104"){$_SERVER["DOCUMENT_ROOT"] .= "/raginghadrons";}
 /*
  *---------------------------------------------------------------
  * APPLICATION ENVIRONMENT
