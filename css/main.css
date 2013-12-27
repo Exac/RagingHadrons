@@ -169,7 +169,7 @@ header img#logo{
 }
 header .togglegames,
 header .togglemenu,
-.button{
+header .button{
 	display:none;
 	position:absolute;
 	top:5px;
@@ -202,13 +202,13 @@ header.togglemenu{
 }
 header .togglegames:hover,
 header .togglemenu:hover,
-.button:hover{
+header .button:hover{
 	background:rgb(91,89,90);
 	color:#000;
 }
 header .togglegames:after,
 header .togglemenu:after,
-.button:after{
+header .button:after{
 	content:'\25BC';
 	/*CODROPS*/
 	content: '';
@@ -230,14 +230,14 @@ header .togglemenu:after,
 }
 header .togglegames:hover:after,
 header .togglemenu:hover:after,
-.button:hover:after {
+header .button:hover:after {
 	height: 260%;
 	opacity: 1;
 }
 
 header .togglegames:active:after,
 header .togglemenu:active:after,
-.button:active:after {
+header .button:active:after {
 	height: 400%;
 	opacity: 1;
 }
@@ -530,7 +530,24 @@ h1,h2,h3,h4,h5,h6{
 	font-size: 18px;
 	text-transform:uppercase;
 }
+
 a img{outline:none;}
+
+.button{
+	background-color:rgb(48,48,48);
+	display:inline-block;
+	padding:8px 12px;
+	color:#ffffff;
+	cursor:pointer;
+	font-family: "armwrestlerbold", sans-serif;
+	text-transform:uppercase;
+	font-size:0.90em;
+	text-decoration:none;
+	transition:color 0.3s ease 0s;
+}
+.button:hover{
+	background-color:rgb(38,38,38);
+}
 
 div.row{
 	clear:both !important;
