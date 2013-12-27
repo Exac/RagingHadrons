@@ -47,17 +47,22 @@ class M_news_article extends CI_Model
 			$last = reset($row);
 		}
 		
-		if($id <= $first)
+		if($id == $last || $id == $next)
+		{
+			return $id."#end";
+		}
+		
+		if($id < $first)
 		{
 			return $last;
 		}
-		else if ($id >= $last)
+		else if ($id > $last)
 		{
 			return $first;
 		}
 		else
 		{
-			return $id + $move_by;
+			return $id - $move_by;
 		}
 		
 		return 1;
