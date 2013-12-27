@@ -29,12 +29,12 @@ class M_news_article extends CI_Model
 	
 	public function get_last($article_id = 0)
 	{
-		return $this->article_move($article_id, 1);
+		return $this->article_move($article_id, -1);
 	}
 	
 	public function get_next($article_id = 0)
 	{
-		return $this->article_move($article_id, -1);
+		return $this->article_move($article_id, 1);
 	}
 	
 	private function article_move($id, $move_by)
@@ -47,22 +47,17 @@ class M_news_article extends CI_Model
 			$last = reset($row);
 		}
 		
-		if($id == $last || $id == $next)
-		{
-			return $id."#end";
-		}
-		
-		if($id < $first)
+		if($id <= $first && $move_by == -1)
 		{
 			return $last;
 		}
-		else if ($id > $last)
+		else if ($id >= $last && $move_by == 1)
 		{
 			return $first;
 		}
 		else
 		{
-			return $id - $move_by;
+			return $id + $move_by;
 		}
 		
 		return 1;
