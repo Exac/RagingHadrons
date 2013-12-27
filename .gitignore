@@ -1,4 +1,6 @@
 *sql_secret.php
+/upload/user/*
+/upload/news/*
 
 #################
 ## Eclipse
