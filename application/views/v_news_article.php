@@ -115,6 +115,13 @@
 		top:0px;
 		left:0px;
 	}
+	.author a *{
+		transition:all 0.3s ease 0s;
+	}
+	.author a:hover *{
+		border-color:rgb(153, 45, 7) !important;
+		background-color:rgb(153, 45, 7);
+	}
 	
 </style>
 <section class="mainnews" style="background-image:url('<?php echo $featured_image; ?>')">
