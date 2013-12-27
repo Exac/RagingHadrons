@@ -6,19 +6,34 @@ class M_news_author extends CI_Model
 	{
 		parent::__construct();
 	}
-	public function get_name($author_id = 0)
+	public function get_name($article_id = 0)
 	{
-		return $this->get($author_id, "name");
+		return $this->get($this->get_author_id($article_id), "name");
 	}
 	
-	public function get_avatar($author_id = 0)
+	public function get_avatar($article_id = 0)
 	{
-		return "/upload/user/".$this->get($author_id, "avatar");
+		return "/upload/user/".$this->get($this->get_author_id($article_id), "avatar");
 	}
 	
-	public function get_tag($author_id = 0)
+	public function get_tag($article_id = 0)
 	{
+		$author_id = $this->get_author_id($article_id);
+		
 		return $this->get($author_id, "tag");
+	}
+	
+	private function get_author_id($article_id)
+	{
+		$author_id = "";
+		$query = $this->db->query("select author_id from news where article_id = '{$article_id}'");
+		
+		foreach($query->result() as $row)
+			{
+				$author_id = reset($row);
+			}
+		
+		return $author_id;
 	}
 	
 	private function get($author_id, $col = "name")

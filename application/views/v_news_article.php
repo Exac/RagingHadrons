@@ -124,6 +124,8 @@
 	}
 	.article_head{
 		position:relative;
+		height:2em;
+		z-index:0;
 	}
 	.article_last, 
 	.article_next{
@@ -146,6 +148,10 @@
 			<span class="article_date"><?php echo $date; ?></span>
 		</div>
 		<?php echo $article; ?>
+		<div class="article_head">
+			<a href="<?php echo $last; ?>" class="article_last button">◄ Last</a>
+			<a href="<?php echo $next; ?>" class="article_next button">Next ►</a>
+		</div>
 		<div class="author">
 			<a href="/u/<?php echo strtolower($author_name); ?>">
 				<img class="author_avatar" src="<?php echo $author_avatar; ?>" alt="<?php echo "{$author_name}'s avatar."; ?>" />
