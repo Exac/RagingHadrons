@@ -77,6 +77,13 @@
 		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
 		outline:1px solid green;
 	}
+	.mainnews .article_date{
+		text-transform:uppercase;
+		font-size:0.66em;
+		text-align:center;
+		display:block;
+		margin:0px;
+	}
 	.author_name,
 	.author_tag{
 		background-color:rgb(48,48,48);
@@ -101,16 +108,26 @@
 		text-align:right;
 		padding-right:2px;
 	}
+	.author a{
+		position:absolute;
+		width:100%;
+		height:100%;
+		top:0px;
+		left:0px;
+	}
 	
 </style>
 <section class="mainnews" style="background-image:url('<?php echo $featured_image; ?>')">
 	<h1><?php echo $title; ?></h1>
 	<article>
+		<span class="article_date"><?php echo $date; ?></span>
 		<?php echo $article; ?>
 		<div class="author">
-			<img class="author_avatar" src="<?php echo $author_avatar; ?>" alt="<?php echo "{$author_name}'s avatar."; ?>" />
-			<span class="author_name"><?php echo $author_name; ?></span>
-			<span class="author_tag">&lt;<?php echo $author_tag; ?>&gt;</span>
+			<a href="/u/<?php echo strtolower($author_name); ?>">
+				<img class="author_avatar" src="<?php echo $author_avatar; ?>" alt="<?php echo "{$author_name}'s avatar."; ?>" />
+				<span class="author_name"><?php echo $author_name; ?></span>
+				<span class="author_tag">&lt;<?php echo $author_tag; ?>&gt;</span>
+			</a>
 		</div>
 	</article>
 </section>

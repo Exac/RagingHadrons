@@ -22,6 +22,11 @@ class M_news_article extends CI_Model
 		return $this->get($article_id, "article_title");
 	}
 	
+	public function get_date($article_id = 0)
+	{
+		return date("M j, Y", strtotime($this->get($article_id, "article_date") ) );
+	}
+	
 	private function get($article_id, $col = "title")
 	{
 		$get_item = "";
