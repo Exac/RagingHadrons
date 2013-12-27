@@ -1,9 +1,9 @@
 
-$('a').click( function(ev){
+/*$('a').click( function(ev){
 	ev.preventDefault();
 	var $self=$(this);
 	drapes($(this)); 
- });
+ });*/
  
  //animate drapes
 function drapes($lnk) {
