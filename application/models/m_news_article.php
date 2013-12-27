@@ -27,6 +27,42 @@ class M_news_article extends CI_Model
 		return date("M j, Y", strtotime($this->get($article_id, "article_date") ) );
 	}
 	
+	public function get_last($article_id = 0)
+	{
+		return $this->article_move($article_id, 1);
+	}
+	
+	public function get_next($article_id = 0)
+	{
+		return $this->article_move($article_id, -1);
+	}
+	
+	private function article_move($id, $move_by)
+	{
+		$first = 1;
+		
+		$query = $this->db->query("select max(article_id) from news");
+		foreach($query->result() as $row)
+		{
+			$last = reset($row);
+		}
+		
+		if($id <= $first)
+		{
+			return $last;
+		}
+		else if ($id >= $last)
+		{
+			return $first;
+		}
+		else
+		{
+			return $id + $move_by;
+		}
+		
+		return 1;
+	}
+	
 	private function get($article_id, $col = "title")
 	{
 		$get_item = "";

@@ -122,12 +122,29 @@
 		border-color:rgb(153, 45, 7) !important;
 		background-color:rgb(153, 45, 7);
 	}
-	
+	.article_head{
+		position:relative;
+	}
+	.article_last, 
+	.article_next{
+		position:absolute;
+		top:0px;
+	}
+	.article_next{
+		right:0px;
+	}
+	.article_last{
+		left:0px;
+	}
 </style>
 <section class="mainnews" style="background-image:url('<?php echo $featured_image; ?>')">
 	<h1><?php echo $title; ?></h1>
 	<article>
-		<span class="article_date"><?php echo $date; ?></span>
+		<div class="article_head">
+			<a href="<?php echo $last; ?>" class="article_last button">◄ Last</a>
+			<a href="<?php echo $next; ?>" class="article_next button">Next ►</a>
+			<span class="article_date"><?php echo $date; ?></span>
+		</div>
 		<?php echo $article; ?>
 		<div class="author">
 			<a href="/u/<?php echo strtolower($author_name); ?>">

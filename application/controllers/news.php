@@ -40,6 +40,8 @@ class News extends CI_Controller {
 		$news_article_data['title'] =  $this->M_news_article->get_title($article_num);
 		$news_article_data['article'] =  $this->M_news_article->get_article($article_num);
 		$news_article_data['date'] = $this->M_news_article->get_date($article_num);
+		$news_article_data['last'] = "/news/article/".$this->M_news_article->get_last($article_num);
+		$news_article_data['next'] = "/news/article/".$this->M_news_article->get_next($article_num);
 		
 		$news_article_data['author_name'] = $this->M_news_author->get_name($article_num);
 		$news_article_data['author_tag'] = $this->M_news_author->get_tag($article_num);
