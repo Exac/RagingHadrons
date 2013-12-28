@@ -6,16 +6,6 @@ class Forum extends CI_Controller {
 	{
 		
 	}
-	
-	public function post($number = "0")
-	{
-		
-	}
-	
-	private function _get_article()
-	{
-		
-	}
 }
 
 /* End of file forum.php */
