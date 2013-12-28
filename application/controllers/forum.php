@@ -4,7 +4,7 @@ class Forum extends CI_Controller {
 	
 	public function index() #/forum/
 	{
-		$this->article();
+		
 	}
 	
 	public function post($number = "0")
