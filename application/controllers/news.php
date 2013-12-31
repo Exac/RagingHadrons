@@ -25,17 +25,15 @@ class News extends CI_Controller {
 	public function article($number = "0") #/news/article/8
 	{
 		$this->load->view('v_temp_head');
-		
-		$this->load->model('M_news_author', '', TRUE);#load database too
-		$this->load->model('M_news_article', '', TRUE);#load database too
-		
 		$this->load->view('v_news_article', $this->_get_article($number) );
-		
 		$this->load->view('v_temp_foot');
 	}
 	
 	private function _get_article($article_num = 0)#0 is default for the newest article
 	{
+		$this->load->model('M_news_author', '', TRUE);#load database too
+		$this->load->model('M_news_article', '', TRUE);#load database too
+		
 		$news_article_data['featured_image'] =  $this->M_news_article->get_featured_image($article_num);
 		$news_article_data['title'] =  $this->M_news_article->get_title($article_num);
 		$news_article_data['article'] =  $this->M_news_article->get_article($article_num);
