@@ -9,6 +9,10 @@ class M_news_article extends CI_Model
 	
 	public function get_post_previews($num_posts)
 	{
+		for($p = /*current_post*/; )
+		{
+			$this->db->query("select * from forum where post_id = '{$p}'");
+		}
 		
 	}
 	
