@@ -7,8 +7,7 @@ class Forum extends CI_Controller {
 		$this->load->view('v_temp_head');
 		
 		
-		
-		$this->load->view('v_forum', $this->_get_posts(30) );
+		$this->load->view('v_forum_post_preview', $this->_get_post_preview(30) );
 		
 		$this->load->view('v_temp_foot');
 	}
@@ -19,13 +18,15 @@ class Forum extends CI_Controller {
 		$this->load->view('v_temp_foot');
 	}
 	
-	private function _get_posts()
+	private function _get_post_list($num_posts)
 	{
 		$this->load->model('M_forum', '', TRUE);#load database
 		
-		$posts = ""; #retun this with HTML string for forum
+		$post_list_data = "";
 		
-		return $posts;
+		$post_list_data = $this->M_forum->get_post_previews($num_posts);
+		
+		return $post_list_data;
 	}
 }
 
