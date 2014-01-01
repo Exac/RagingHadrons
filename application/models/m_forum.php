@@ -11,7 +11,7 @@ class M_news_article extends CI_Model
 	{
 		for($p = /*current_post*/; )
 		{
-			$this->db->query("select * from forum where post_id = '{$p}'");
+			$this->db->query("SELECT forum.title, forum.post_id, forum.last_reply, users.id, users.name FROM forum INNER JOIN users ON forum.author_id=users.id ORDER BY forum.last_reply DESC LIMIT {$num_posts}'");
 		}
 		
 	}
