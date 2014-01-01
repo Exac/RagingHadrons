@@ -7,7 +7,7 @@ class Forum extends CI_Controller {
 		$this->load->view('v_temp_head');
 		
 		
-		$this->load->view('v_forum_post_preview', $this->_get_post_preview(30) );
+		$this->load->view('v_forum_post_preview', $this->_get_post_list(30) );
 		
 		$this->load->view('v_temp_foot');
 	}
