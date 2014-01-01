@@ -12,7 +12,9 @@ class M_news_article extends CI_Model
 		$this->db->query("SELECT forum.title, forum.post_id, forum.last_reply, users.id, users.name FROM forum INNER JOIN users ON forum.author_id=users.id ORDER BY forum.last_reply DESC LIMIT {$num_posts}'");
 		foreach($query->result() as $row)
 		{
-			$item = reset($row);
+			echo $row->forum.title;
+			echo $row->forum.post_id;
+			echo $row->forum.last_reply;
 		}
 	}
 	
