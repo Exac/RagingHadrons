@@ -1,4 +1,4 @@
 <?php
-/* v_forum_post_preview */
+echo $post_list;
 
 ?>

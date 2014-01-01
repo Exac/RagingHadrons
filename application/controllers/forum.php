@@ -22,7 +22,7 @@ class Forum extends CI_Controller {
 	{
 		$this->load->model('M_forum', '', TRUE);#load database
 		
-		$post_list_data = $this->M_forum->get_post_previews($num_posts);
+		$post_list_data["post_list"] = $this->M_forum->get_post_previews($num_posts);
 		
 		return $post_list_data;
 	}

@@ -9,12 +9,36 @@ class M_forum extends CI_Model
 	
 	public function get_post_previews($num_posts)
 	{
-		$this->db->query("SELECT forum.title, forum.post_id, forum.last_reply, users.id, users.name FROM forum INNER JOIN users ON forum.author_id=users.id ORDER BY forum.last_reply DESC LIMIT {$num_posts}'");
+		$post_preview = '<ul class="post_preview">';
+		
+		$query = $this->db->query("SELECT forum.title, forum.post_id, forum.last_reply, users.id, users.name FROM forum INNER JOIN users ON forum.author_id=users.id ORDER BY forum.last_reply DESC LIMIT {$num_posts}");
 		foreach($query->result() as $row)
 		{
-			echo $row->forum.title;
-			echo $row->forum.post_id;
-			echo $row->forum.last_reply;
+			$post_preview .= "<li>". "<a href='/forum/post/{$row->post_id}'>" .$row->title."</a><span class='age'>".$this->human_timing(strtotime($row->last_reply))." old</span></li>";
+		}
+		$post_preview .= "</ul>";
+		
+		return $post_preview;
+	}
+	
+	private function human_timing ($time)
+	{
+		$time = time() - $time;
+	
+		$tokens = array (
+			31536000 => 'year',
+			2592000 => 'month',
+			604800 => 'week',
+			86400 => 'day',
+			3600 => 'hour',
+			60 => 'minute',
+			1 => 'second'
+		);
+	
+		foreach ($tokens as $unit => $text) {
+			if ($time < $unit) continue;
+			$numberOfUnits = floor($time / $unit);
+			return $numberOfUnits.' '.$text.(($numberOfUnits>1)?'s':'');
 		}
 	}
 	
