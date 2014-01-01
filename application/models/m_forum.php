@@ -1,6 +1,6 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class M_news_article extends CI_Model
+class M_forum extends CI_Model
 {
 	public function __construct()
 	{
