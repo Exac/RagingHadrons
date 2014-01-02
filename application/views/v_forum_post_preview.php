@@ -53,7 +53,7 @@ ul.post_preview{
 	display:block;
 	font-size:0.6em !important;
 	text-align:center;
-	margin-top:11px;
+	margin-5px;
 }
 .next{
 	float:right;

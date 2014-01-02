@@ -5,12 +5,69 @@ class M_forum extends CI_Model
 	public $next = 0;
 	public $previous = 0;
 	
+	public $name, $tag, $avatar, $title, $post_id, $content, $created;
+	public $replies;
+	
 	public function __construct()
 	{
 		parent::__construct();
 	}
 	
+	public function load($post_id = 1) #load a post
+	{
+		 
+		if(!is_numeric($post_id)){
+			return $this->load(1);
+		}
+		
+		$query = $this->db->query("	select users.name, users.tag, users.avatar, sf.title, sf.post_id, sf.content, sf.created from 
+										(select *
+										from forum
+										where forum.post_id={$post_id}) as sf
+									inner join users on sf.author_id = users.id");
+		if($query->num_rows() > 0)
+		{
+			foreach($query->result() as $row)
+			{
+				$this->name = $row->name;
+				$this->tag = $row->tag;
+				$this->avatar = $row->avatar;
+				$this->title = $row->title;
+				$this->post_id = $row->post_id;
+				$this->content = $row->content;
+				$this->created = $row->created;
+			}
+		}
+		
+		$this->load_replies($post_id);
+	}
 	
+	private function load_replies($post_id)
+	{
+		$query = $this->db->query("	select forum_replies.posted, forum_replies.content, 
+									users.name as commenter_name, users.id as commenter_id, users.tag as commenter_tag
+									from forum_replies
+									inner join users on forum_replies.user_id=users.id
+									inner join forum on forum.post_id = {$post_id} = forum_replies.post_id
+									order by forum_replies.posted;");
+		if($query->num_rows() > 0)
+		{
+			$reply;
+			$index = 0;
+			foreach($query->result() as $row)
+			{
+				$reply[$index]["posted"] = $row->posted;
+				$reply[$index]["content"] = $row->content;
+				$reply[$index]["commenter_name"] = $row->commenter_name;
+				$reply[$index]["commenter_id"] = $row->commenter_id;
+				$reply[$index]["commenter_tag"] = $row->commenter_tag;
+				$index++;
+			}
+		}else{
+			
+		}
+		$this->replies = $reply;
+	}
 	
 	public function get_post_previews($page, $num_posts)
 	{
@@ -55,6 +112,8 @@ class M_forum extends CI_Model
 		
 		return $post_preview;
 	}
+	
+
 	
 	private function human_timing ($time)
 	{

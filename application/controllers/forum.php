@@ -28,7 +28,8 @@ class Forum extends CI_Controller {
 	{
 		$this->load->view('v_temp_head');
 		
-		$data = _get_post_data($post_id);
+		$data = $this->_get_post_data($post_id);
+		$this->load->view('v_forum_post', $data);
 		
 		$this->load->view('v_temp_foot');
 	}
@@ -51,7 +52,17 @@ class Forum extends CI_Controller {
 		}else{
 			$this->M_forum->load(1);
 		}
-		return "";
+		
+		$data["name"] = $this->M_forum->name;
+		$data["tag"] = $this->M_forum->tag;
+		$data["avatar"] = $this->M_forum->avatar;
+		$data["title"] = $this->M_forum->title;
+		$data["post_id"] = $this->M_forum->post_id;
+		$data["content"] = $this->M_forum->content;
+		$data["created"] = $this->M_forum->created;
+		$data["reply"] = $this->M_forum->replies;
+		
+		return $data;
 	}
 }
 
