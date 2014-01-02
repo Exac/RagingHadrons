@@ -7,25 +7,51 @@ class Forum extends CI_Controller {
 	public function index($page = 0) #/forum/
 	{
 		$this->page = $page;
+		$data["previous_enabled"] = "";
 		
 		$this->load->view('v_temp_head');
-		$this->load->view('v_forum_post_preview', $this->_get_post_list(30) );
+		$data["post_list_data"] = $this->_get_post_list(30);
+		
+		$data["previous"] = $this->M_forum->previous;
+		$data["next"] = $this->M_forum->next;
+		
+		if($page <= 0)
+		{
+			$data["previous_enabled"] = "style='display:none !important;'";
+		}
+		
+		$this->load->view('v_forum_post_preview', $data);
 		$this->load->view('v_temp_foot');
 	}
 	
-	public function post($post_id) #/forum/post/8
+	public function post($post_id = 1) #/forum/post/8
 	{
 		$this->load->view('v_temp_head');
+		
+		$data = _get_post_data($post_id);
+		
 		$this->load->view('v_temp_foot');
 	}
 	
 	private function _get_post_list($num_posts)
 	{
 		$this->load->model('M_forum', '', TRUE);#load database
-		
-		$post_list_data["post_list"] = $this->M_forum->get_post_previews($this->page, $num_posts);
+		$post_list_data = $this->M_forum->get_post_previews($this->page, $num_posts);
 		
 		return $post_list_data;
+	}
+	
+	private function _get_post_data($post_id = 1)
+	{
+		$this->load->model('M_forum', '', TRUE);
+		
+		if(is_numeric($post_id))
+		{
+			$this->M_forum->load($post_id);
+		}else{
+			$this->M_forum->load(1);
+		}
+		return "";
 	}
 }
 
