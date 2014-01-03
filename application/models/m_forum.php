@@ -44,28 +44,31 @@ class M_forum extends CI_Model
 	
 	private function load_replies($post_id)
 	{
-		$query = $this->db->query("	select forum_replies.posted, forum_replies.content, 
-									users.name as commenter_name, users.id as commenter_id, users.tag as commenter_tag
+		$query = $this->db->query("	select * from
+									(select forum_replies.post_id, forum_replies.user_id, forum_replies.content, forum_replies.posted
 									from forum_replies
-									inner join users on forum_replies.user_id=users.id
-									inner join forum on forum.post_id = {$post_id} = forum_replies.post_id
-									order by forum_replies.posted;");
+									where forum_replies.post_id = {$post_id}) as fr
+									inner join users on users.id=fr.user_id");
 		if($query->num_rows() > 0)
 		{
-			$reply;
 			$index = 0;
 			foreach($query->result() as $row)
 			{
 				$reply[$index]["posted"] = $row->posted;
 				$reply[$index]["content"] = $row->content;
-				$reply[$index]["commenter_name"] = $row->commenter_name;
-				$reply[$index]["commenter_id"] = $row->commenter_id;
-				$reply[$index]["commenter_tag"] = $row->commenter_tag;
+				$reply[$index]["commenter_name"] = $row->name;
+				$reply[$index]["commenter_id"] = $row->id;
+				$reply[$index]["commenter_tag"] = $row->tag;
 				$index++;
 			}
 		}else{
-			
+			$reply[0]["posted"] = "";
+			$reply[0]["content"] = "No replies yet.";
+			$reply[0]["commenter_name"] = "";
+			$reply[0]["commenter_id"] = "";
+			$reply[0]["commenter_tag"] = "";
 		}
+		
 		$this->replies = $reply;
 	}
 	
