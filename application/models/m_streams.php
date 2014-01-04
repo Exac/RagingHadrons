@@ -7,6 +7,8 @@ class M_streams extends CI_Model
 	private $online_streams_json; #foreach($json_array as $i=>$js)
 	private $avaliable = true;
 	
+	public $stream_data;
+	
 	public function __construct()
 	{
 		parent::__construct();
@@ -44,8 +46,11 @@ class M_streams extends CI_Model
 			$stream_data['title'] = htmlentities($po['title']);
 			$stream_data['name'] = htmlentities($po['channel']['login']);
 			$stream_data['background'] = htmlentities($po['channel']['image_url_huge']);
-			return $stream_data;
+			$stream_data['ss'] = $po['channel']['screen_cap_url_large'];
+			$this->stream_data[] = $stream_data;
 		}
+		
+		return $this->stream_data[0];
 		
 	}
 	
