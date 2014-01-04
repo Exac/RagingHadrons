@@ -1,7 +1,4 @@
 <?php
-if($_SERVER["SERVER_NAME"] != "localhost" && $_SERVER["SERVER_NAME"] != "127.0.0.1" && $_SERVER["SERVER_NAME"] != "10.0.1.104"){$_SERVER["DOCUMENT_ROOT"] .= "/raginghadrons";}
-//include_once($_SERVER["DOCUMENT_ROOT"] . "/php/twitch.php");
-
 class Twitch {
 	private $streamlist;
 	
@@ -46,12 +43,7 @@ class Twitch {
 		//get list of streams IDs to show on the site
 		$streamlist_arr = array();
 		
-		include_once($_SERVER["DOCUMENT_ROOT"] . "/php/sql_secret.php");
-
-		mysql_connect("raginghadrons.db.10405771.hostedresource.com", 
-						  "raginghadrons", 
-						  $sqlpw);
-		mysql_select_db("raginghadrons");
+		include_once($_SERVER["DOCUMENT_ROOT"] . "/php/sql.php");#connect to MySQL db
 	
 		$query = "select streamname, promoted from twitch_channels";
 		$result = mysql_query($query);
@@ -226,8 +218,5 @@ function get_stream_list(){
 	return $streamlist;
 }
 
-
-
-$twitch = new Twitch();
 
 ?>
