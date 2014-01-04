@@ -84,9 +84,11 @@
 	<div style="opacity:0.5"><?php echo $featured_stream['object_chat']; ?></div>
 	</section>
 	<section class="other_streams">
-	<h1>Online Streams</h1>
 		<ul>
 			<?php
+			if($avaliable)
+			{
+				echo "<h1>Online Streams</h1>";
 				foreach($streams as $s)
 				{
 					echo "<li style='background-image:url(\"{$s['ss']}\");'>";
@@ -95,6 +97,7 @@
 					echo "<a class='outgoing' href='http://www.twitch.tv/{$s['name']}'></a>";
 					echo "</li>";
 				}
+			}
 			?>
 		</ul>
 	</section>
