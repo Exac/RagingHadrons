@@ -1,4 +1,5 @@
 *sql_secret.php
+*encryption_secret.php
 /upload/user/*
 /upload/news/*
 

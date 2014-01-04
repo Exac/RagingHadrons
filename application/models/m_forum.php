@@ -20,7 +20,7 @@ class M_forum extends CI_Model
 			return $this->load(1);
 		}
 		
-		$query = $this->db->query("	select users.name, users.tag, users.avatar, sf.title, sf.post_id, sf.content, sf.created from 
+		$query = $this->db->query("	select users.username as name, users.company as tag, users.last_name as avatar, sf.title, sf.post_id, sf.content, sf.created from 
 										(select *
 										from forum
 										where forum.post_id={$post_id}) as sf
@@ -56,9 +56,9 @@ class M_forum extends CI_Model
 			{
 				$reply[$index]["posted"] = $row->posted;
 				$reply[$index]["content"] = $row->content;
-				$reply[$index]["commenter_name"] = $row->name;
+				$reply[$index]["commenter_name"] = $row->username;
 				$reply[$index]["commenter_id"] = $row->id;
-				$reply[$index]["commenter_tag"] = $row->tag;
+				$reply[$index]["commenter_tag"] = $row->last_name;
 				$index++;
 			}
 		}else{
@@ -85,7 +85,7 @@ class M_forum extends CI_Model
 		
 		$query = $this->db->query("SELECT forum.title, forum.post_id, forum.last_reply, 
 									SUBSTRING(forum.content, 1, 150) as content, 
-									users.id, users.name 
+									users.id, users.username as name 
 									FROM forum 
 									INNER JOIN users ON forum.author_id=users.id 
 									ORDER BY forum.last_reply 
