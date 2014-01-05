@@ -8,19 +8,19 @@ class M_news_author extends CI_Model
 	}
 	public function get_name($article_id = 0)
 	{
-		return $this->get($this->get_author_id($article_id), "name");
+		return $this->get($this->get_author_id($article_id), "username"); #name
 	}
 	
 	public function get_avatar($article_id = 0)
 	{
-		return "/upload/user/".$this->get($this->get_author_id($article_id), "avatar");
+		return "/upload/user/".$this->get($this->get_author_id($article_id), "last_name"); #avatar
 	}
 	
 	public function get_tag($article_id = 0)
 	{
 		$author_id = $this->get_author_id($article_id);
 		
-		return $this->get($author_id, "tag");
+		return $this->get($author_id, "company"); #tag
 	}
 	
 	private function get_author_id($article_id)

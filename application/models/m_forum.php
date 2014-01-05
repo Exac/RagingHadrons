@@ -58,7 +58,7 @@ class M_forum extends CI_Model
 				$reply[$index]["content"] = $row->content;
 				$reply[$index]["commenter_name"] = $row->username;
 				$reply[$index]["commenter_id"] = $row->id;
-				$reply[$index]["commenter_tag"] = $row->last_name;
+				$reply[$index]["commenter_tag"] = $row->company;
 				$index++;
 			}
 		}else{
