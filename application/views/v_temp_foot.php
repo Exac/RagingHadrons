@@ -1,25 +1,11 @@
+<?php if(isset($center)){if($center){echo '</div>';}} ?>
 <footer>
 	<span>&copy; <?php echo Date("Y"); ?> Raging Hadrons </span> 
-	<style type="text/css" scoped="scoped">
-		input[type=text],
-		input[type=password],
-		input[type=submit]{
-			background:black;
-			border:1px solid rgb(48,48,48);
-			color:#ffffff;
-			height:16px;
-			line-height:16px;
-			font-size:12px;
-			padding:1px;
-			box-sizing:content-box !important;
-			-moz-box-sizing:content-box !important;
-		}
-	</style>
-	<form action="/auth/" method="post" class="login">
-		<input type="text" name="identity" />
-		<input type="password" name="password" />
-		<input type="submit" value="login" />
-	</form>
+	<?php if (!$this->ion_auth->logged_in()): ?>
+	<a href="/auth/login">Login</a>
+	<?php else: ?>
+	<a href="/auth/logout">Logout</a>
+	<?php endif; ?>
 </footer>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>

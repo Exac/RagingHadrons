@@ -45,3 +45,4 @@
   <div class="l"></div>
   <div id="drapes"></div>
 </div>
+<?php if(isset($center)){if($center){echo '<div class="main_frame">';}} ?>
