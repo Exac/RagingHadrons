@@ -27,7 +27,7 @@ $config['base_url']	= 'http://raginghadrons.com/';
 |
 */
 $config['index_page'] = 'index.php';
-
+$config['index_page'] = ''; #needed to prevent refresh from adding "raginghadrons.com/index.php/refresh/directory"...
 /*
 |--------------------------------------------------------------------------
 | URI PROTOCOL

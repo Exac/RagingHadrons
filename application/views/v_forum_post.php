@@ -17,7 +17,8 @@
 }
 
 .post,
-.replies{
+.replies,
+.reply{
 	max-width:855px;
 	margin:0px auto 2px;
 	position:relative;
@@ -58,7 +59,62 @@
 	top:50%;
 	font-size:9px !important;
 }
-
+.reply .reply_content{
+	width:75%;
+	min-width:350px;
+	height:6em;
+	display:block;
+	margin:0px auto;
+	background:none;
+	color:#ffffff;
+}
+.reply iframe{
+	padding-top:5px;
+	position:absolute;
+	left:0px;
+	bottom:0px;
+}
+.reply input[type=submit]{
+	height:160px;
+	width:160px;
+	box-sizing:content-box;
+	vertical-align:bottom;
+	transition:all ease 0.08s;
+	font-size:1.66em;
+	position:absolute;
+	right:0px;
+	bottom:0px;
+}
+.reply input[type=submit]:hover{
+	background-color:rgb(153, 45, 7);
+	
+}
+.reply .liner{
+	position:relative;
+	display:block;
+	text-align:center;
+	height:170px;
+	width:75%;
+	margin:0px auto;
+}
+.reply .liner *{
+	display:inline;
+}
+@media only screen and (max-width: 680px) {
+	.reply .liner{
+		width:100%;
+		height:340px;
+	}
+	.reply input[type=submit]{
+		left:0px;
+		margin:0px auto;
+	}
+	.reply iframe{
+		margin:0px auto;
+		right:0px;
+		top:0px;
+	}
+}
 </style>
 
 <section class="post">
@@ -70,6 +126,18 @@
 	</address>
 	<div class="content"><?php echo $content; ?></div>
 </section>
+<?php if ($this->ion_auth->logged_in()) { ?>
+<section class="reply">
+	<h1>Reply</h1>
+	<form name="reply" method="post">
+		<textarea class="reply_content" name="reply_content"></textarea>
+		<div class="liner">
+			<?php $ayah = new AYAH(); ?><?php echo $ayah->getPublisherHTML(); ?>
+			<input type="submit" class="button" value="Reply" name="submit" />
+		</div>
+	</form>
+</section>
+<?php } ?>
 <section class="replies">
 	<?php foreach($reply as $r){ ?>
 		<div class="comment">

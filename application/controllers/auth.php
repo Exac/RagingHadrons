@@ -29,7 +29,7 @@ class Auth extends CI_Controller {
 		{
 			//redirect them to the login page
 			#redirect('auth/login', 'refresh');
-			redirect('/auth/login', 'refresh');
+			redirect('/auth/login');
 		}
 		elseif (!$this->ion_auth->is_admin()) //remove this elseif if you want to enable this for non-admins
 		{
@@ -737,10 +737,12 @@ class Auth extends CI_Controller {
 
 	function _render_page($view, $data=null, $render=false)
 	{
+		$hf_data['center'] = true;
 
 		$this->viewdata = (empty($data)) ? $this->data: $data;
-
-		$view_html = $this->load->view($view, $this->viewdata, $render);
+		$view_html = $this->load->view("v_temp_head", $hf_data);
+		$view_html .= $this->load->view($view, $this->viewdata, $render);
+		$view_html .= $this->load->view("v_temp_foot", $hf_data);
 
 		if (!$render) return $view_html;
 	}
