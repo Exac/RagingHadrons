@@ -41,7 +41,6 @@
 .cloud{
 	z-index:-1;
 	position:absolute;
-	opacity:0.5;
 	height:50px;
 	width:50px;
 }
@@ -61,7 +60,7 @@
 <script type="text/javascript" defer>
 	$("body").append("<div class='sky'></div>");
 		
-	setInterval(sky_update, '500');//run every half second
+	setInterval(sky_update, '160');//run every third of a second
 	
 	function Cloud (x,y) {
 		this.opacity = 1.0;
@@ -120,11 +119,16 @@
 			sky_create();
 			changed = false;
 		}
-		var o = 0;
+		var o = 0;		
 		for(var y=0; y < sky.rows(); y++){
 			for(var x=0; x < sky.cols(); x++){
-				
-				$('.cloud[data-x='+x+'][data-y='+y+']').css('opacity', '1.0');
+				if(x<=0){
+					o = arr[y][x];/* + ((Math.random()-0.5)*0.1);*/
+				}else{
+					o = Math.abs(Math.random() - 0.5);
+				}
+				$('.cloud[data-x='+x+'][data-y='+y+']').css('opacity', o);
+				arr[y][x-1] = o;
 			}
 		}
 	}
