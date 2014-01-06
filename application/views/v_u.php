@@ -37,6 +37,7 @@
 	width:100%;
 	min-height:90%;
 	display:block;
+	opacity:0.66;
 }
 .cloud{
 	z-index:-1;
