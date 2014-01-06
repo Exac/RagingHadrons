@@ -41,6 +41,7 @@
 $route['default_controller'] = "C_index";
 $route['404_override'] = '';
 $route['forum/(:num)'] = "forum/index/$1";
+$route['u/(:any)'] = "u/ser/$1";
 
 
 /* End of file routes.php */
