@@ -61,7 +61,7 @@
 <script type="text/javascript" defer>
 	$("body").append("<div class='sky'></div>");
 		
-	setInterval(sky_update, '160');//run every third of a second
+	setInterval(sky_update, '17');//run every third of a second
 	
 	function Cloud (x,y) {
 		this.opacity = 1.0;
