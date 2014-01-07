@@ -32,12 +32,12 @@
   </ul>
   <div class="togglegames">Games</div>
   <ul id="games">
-    <li class="small sc2logo" title="Starcraft 2"></li>
-    <li class="small dota2logo" title="DOTA 2"></li>
-    <li class="small lollogo" title="League of Legends"></li>
-    <li class="small bf4logo" title="Battlefield 4"></li>
-    <!--<li class="small wslogo" title="Wildstar"></li>--> 
-    <!--<li class="small sclogo" title="Star Citizen"></li>-->
+    <li class="small sc2logo" title="Starcraft 2"><a href="/game/starcraft2"></a></li>
+    <li class="small dota2logo" title="DOTA 2"><a href="/game/dota2"></a></li>
+    <li class="small lollogo" title="League of Legends"><a href="/game/lol"></a></li>
+    <li class="small bf4logo" title="Battlefield 4"><a href="/game/battlefield4"></a></li>
+    <!--<li class="small wslogo" title="Wildstar"><a href="/game/wildstar"></a></li>--> 
+    <!--<li class="small sclogo" title="Star Citizen"><a href="/game/starcitizen"></a></li>-->
   </ul>
 </header>
 <div class="techbar">
