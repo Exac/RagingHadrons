@@ -1,0 +1,15 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+class U extends CI_Controller {
+	
+	public function index() #/game/
+	{
+		$this->load->view('v_temp_head');
+		$this->load->view('v_game');
+		$this->load->view('v_temp_foot');
+	}
+	
+}
+
+/* End of file game.php */
+/* Location: ./application/controllers/game.php */
