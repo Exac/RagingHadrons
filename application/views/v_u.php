@@ -61,7 +61,7 @@
 <script type="text/javascript" defer>
 	$("body").append("<div class='sky'></div>");
 		
-	setInterval(sky_update, '17');//run every third of a second
+	setInterval(sky_update, '700');//run every third of a second
 	
 	function Cloud (x,y) {
 		this.opacity = 1.0;
@@ -104,6 +104,8 @@
 	}
 	
 	function sky_create() {
+		$('.sky').remove();
+		$("body").append("<div class='sky'></div>");
 		$(".sky").empty();
 		for(var y=0; y < sky.rows(); y++){
 			arr[y] = [];
