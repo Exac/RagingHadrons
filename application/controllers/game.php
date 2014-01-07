@@ -4,8 +4,15 @@ class U extends CI_Controller {
 	
 	public function index() #/game/
 	{
+		$this->name();
+	}
+	
+	public function name($game_name = "starcraft2") #/game/starcraft2
+	{
+		$data['name_name'] = $game_name;
+		
 		$this->load->view('v_temp_head');
-		$this->load->view('v_game');
+		$this->load->view('v_game', $data);
 		$this->load->view('v_temp_foot');
 	}
 	
