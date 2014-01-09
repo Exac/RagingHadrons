@@ -8,6 +8,14 @@ class M_game extends CI_Model
 		parent::__construct();
 	}
 
+	public function get_game_css($game_name)
+	{
+		if($game_name == "starcraft2")
+		{
+			return "/*sc2 css */";
+		}
+	}
+
 }
 
 ?>
