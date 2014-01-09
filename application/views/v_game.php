@@ -34,7 +34,7 @@ footer{
 </style>
 <div class="gamebg"></div><!-- gamebg -->
 <section class="gamecontent">
-<h1><?php echo $game_name; ?></h1>
+<h1 class="gamename"><?php echo $game_name; ?></h1>
 
 </section>
 
