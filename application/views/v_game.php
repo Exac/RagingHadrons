@@ -14,6 +14,11 @@
 	background-color:#000000;
 	margin:149px auto -149px auto;
 }
+.gamecontent{
+	max-width:855px;
+	margin:0px auto;
+	display:block;
+}
 footer{
 	position:fixed;
 	bottom:0px;
@@ -28,5 +33,8 @@ footer{
 }
 </style>
 <div class="gamebg"></div><!-- gamebg -->
+<section class="gamecontent">
 <h1><?php echo $game_name; ?></h1>
+
+</section>
 
