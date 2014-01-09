@@ -22,6 +22,10 @@ footer{
 	width:100%;
 	text-align:center;
 }
+.sc2 .panel{
+	/* #53b3f0 */
+	/* #acfcff */
+}
 </style>
 <div class="gamebg"></div><!-- gamebg -->
 <h1><?php echo $game_name; ?></h1>
