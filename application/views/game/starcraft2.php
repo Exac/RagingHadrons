@@ -34,7 +34,7 @@ blockquote ul{
 		<li>More WCS Global Events with partner tournaments , for additional competition and opportunities for players</li>
 		<li>More emphasis on regional play, with additional points and prize money for Premier League players compared to 2013</li>
 	</ul>
-	<a class="button" href="http://wcs.battle.net/sc2/en/about">Source</a>
+	<a class="button" href="http://wcs.battle.net/sc2/en/about" title="About StarCraft II World Championship Series 2014">Source</a>
 	</blockquote>
 </section>
 
