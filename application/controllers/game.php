@@ -13,6 +13,7 @@ class Game extends CI_Controller {
 		
 		$this->load->view('v_temp_head');
 		$this->load->view('v_game', $data);
+		$this->load->view("game/{$game_name}", $data);
 		$this->load->view('v_temp_foot');
 	}
 	
