@@ -18,8 +18,13 @@
 	max-width:855px;
 	margin:0px auto;
 	display:block;
+	overflow:hidden;
+}
+.gamecontent *{
+	max-width:855px;
 }
 footer{
+	display:none;
 	position:fixed;
 	bottom:0px;
 	left:0px;
