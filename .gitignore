@@ -2,6 +2,7 @@
 *encryption_secret.php
 /upload/user/*
 /upload/news/*
+sftp-config.json
 
 #################
 ## Eclipse
