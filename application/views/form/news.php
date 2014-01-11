@@ -4,6 +4,8 @@
 
 <?php echo form_open('form'); ?>
 
+<?php if(isset($error)){echo "Error submitting form.";} ?>
+
 <h5>Username</h5>
 <input type="text" name="username" value="" size="50" />
 
