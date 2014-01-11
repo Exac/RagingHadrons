@@ -2,8 +2,6 @@
 
 </style>
 
-<?php echo validation_errors(); ?>
-
 <?php echo form_open('form'); ?>
 
 <h5>Username</h5>
