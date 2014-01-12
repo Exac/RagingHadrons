@@ -29,5 +29,15 @@ class Form extends CI_Controller {
 		}
 
 	}
+
+	function get($formname)
+	{
+		$this->load->model('m_form', '', TRUE);
+		$data['form'] = $this->m_form->load($formname);
+
+
+		$this->load->view('v_form', $data);
+
+	}
 }
 ?>
