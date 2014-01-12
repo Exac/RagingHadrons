@@ -11,8 +11,8 @@ class m_form extends CI_Model {
 	public function load($formname)
 	{
 		switch ($formname) {
-			case 'news_post':
-				$form = $this->get_news_post();
+			case 'news_create':
+				$form = $this->news_create();
 				break;
 			
 			default:
@@ -20,12 +20,28 @@ class m_form extends CI_Model {
 				break;
 		}
 
-		return $form;
+		// return $form;
 	}
 
-	private function get_news_post()
+	private function news_create()
 	{
-		return "news post";
+		$this->load->helper(array('form', 'url'));
+		
+		$this->load->library('form_validation');
+
+		$this->form_validation->set_rules('title', 'Title', 'trim|required|max_length[254]|xss_clean');
+		$this->form_validation->set_rules('content', 'Content', 'trim|max_length[65534]|xss_clean');
+
+		if ($this->form_validation->run() == FALSE)
+		{
+			$data['location'] = __FUNCTION__;
+
+			$this->load->view('form/news_create', $data);
+		}
+		else
+		{
+			echo "SUCCESS NEWS_CREATE";
+		}
 	}
 
 }
