@@ -20,19 +20,14 @@ class Form extends CI_Controller {
 		
 		if ($this->form_validation->run() == FALSE)
 		{
-			$data['error'] = $this->form_validation;
-			$this->load->view('form/news', $data);
+
+			$this->load->view('form/news');
 		}
 		else
 		{
 			echo "SUCCESS";
 		}
 
-		// $this->load->helper(array('form', 'url'));
-
-		// $this->load->library('form_validation');
-		
-		// $this->load->view('form/news');
 	}
 }
 ?>
