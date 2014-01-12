@@ -6,7 +6,7 @@ class Form extends CI_Controller {
 	* FORM VALIDATION EXAMPLE
 	* $this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[2]|max_length[16]|is_unique[users.username]|xss_clean|md5|matches[usernameconf]');
 	*/
-	
+
 	function index()
 	{
 		$this->load->helper(array('form', 'url'));
@@ -21,7 +21,7 @@ class Form extends CI_Controller {
 		if ($this->form_validation->run() == FALSE)
 		{
 
-			$this->load->view('form/news');
+			// $this->load->view('form/news');
 		}
 		else
 		{
@@ -30,13 +30,12 @@ class Form extends CI_Controller {
 
 	}
 
-	function get($formname)
+	public function get($formname, $option1 = NULL)
 	{
 		$this->load->model('m_form', '', TRUE);
-		$data['form'] = $this->m_form->load($formname);
+		$this->m_form->load($formname);
 
-
-		$this->load->view('v_form', $data);
+		// return $this->load->view("/form/{$formname}", $data);
 
 	}
 }
