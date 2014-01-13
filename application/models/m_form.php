@@ -32,15 +32,17 @@ class m_form extends CI_Model {
 		$this->form_validation->set_rules('title', 'Title', 'trim|required|max_length[254]|xss_clean');
 		$this->form_validation->set_rules('content', 'Content', 'trim|max_length[65534]|xss_clean');
 
-		if ($this->form_validation->run() == FALSE)
+		if ($this->form_validation->run() == FALSE || !$this->ion_auth->logged_in() || $this->ion_auth->is_admin())
 		{
 			$data['location'] = __FUNCTION__;
+			$data['errors'] = "Ensure that you are logged into your admin account before posting news.";
+
 
 			$this->load->view('form/news_create', $data);
 		}
 		else
 		{
-			echo "SUCCESS NEWS_CREATE";
+			$query = $this->db->query("");
 		}
 	}
 
