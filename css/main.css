@@ -534,6 +534,11 @@ section#jumbotron span.postdate{
 		width:75%;
 	}
 }
+
+/* ==========================================================================
+   GENERAL STYLES
+   ========================================================================== */
+
 h1,h2,h3,h4,h5,h6{
 	color:#b8b8b8;
 	font-family: "armwrestlerbold", sans-serif;
@@ -557,6 +562,51 @@ a img{outline:none;}
 }
 .button:hover{
 	background-color:rgb(38,38,38);
+}
+
+.warning, .notice, .success{
+	display: block;
+	padding:10px 20px;
+	font-weight:700;
+	font-style:normal;
+	border-bottom: 4px solid #504f50;
+	position:relative;
+}
+.warning:after, .notice:after, .success:after{
+	content: " " ;
+	display: block;
+	position: absolute;
+	background-color: #504f50;
+	height:4px;
+	width:25%;
+	right:0px;
+	bottom:0px;
+}
+
+.warning:before, .notice:before, .success:before{
+	content: " " ;
+	display: block;
+	position: absolute;
+	background-color: #504f50;
+	height:8px;
+	width:25%;
+	left:0px;
+	top:100%;
+}
+
+.warning{
+	color:#c05a5a;
+	background-color:#efd6d6;
+}
+
+.notice{
+	color:#c0ae5a;
+	background-color:#efebd6;
+}
+
+.success{
+	color:#9fc05a;
+	background-color:#e7efd6;
 }
 
 div.row{
@@ -734,7 +784,7 @@ footer{
 	z-index:1 !important;
 }
 
-* ==========================================================================
+/* ==========================================================================
    Print styles
    ========================================================================== */
 
