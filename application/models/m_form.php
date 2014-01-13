@@ -10,6 +10,10 @@ class m_form extends CI_Model {
 
 	public function load($formname)
 	{
+		$this->load->helper(array('form', 'url'));
+		
+		$this->load->library('form_validation');
+
 		switch ($formname) {
 			case 'news_create':
 				$form = $this->news_create();
@@ -25,10 +29,6 @@ class m_form extends CI_Model {
 
 	private function news_create()
 	{
-		$this->load->helper(array('form', 'url'));
-		
-		$this->load->library('form_validation');
-
 		$this->form_validation->set_rules('title', 'Title', 'trim|required|max_length[254]|xss_clean');
 		$this->form_validation->set_rules('content', 'Content', 'trim|max_length[65534]|xss_clean');
 
