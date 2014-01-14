@@ -16,6 +16,8 @@
 <h5>Article</h5>
 <textarea name="content"><?php echo set_value('content'); ?></textarea>
 
+<input type="hidden" value="<?php if(isset($user_id)){echo $user_id;}?>" name="user_id_confirm" />
+
 <div><input type="submit" class="button" value="Submit News" /></div>
 
 </form>
