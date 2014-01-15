@@ -6,7 +6,8 @@
     <head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title><?php if(!isset($title)){echo "Raging Hadrons Professional Gaming";}else{echo $title;} ?></title>
+        <title><?php if(!
+        isset($title)){echo "Raging Hadrons Professional Gaming";}else{echo $title;} ?></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
@@ -33,9 +34,9 @@
   <ul id="games">
     <li class="small sc2logo" title="Starcraft 2"><a href="/game/starcraft2"></a></li>
     <li class="small dota2logo" title="DOTA 2"><a href="/game/dota2"></a></li>
-    <li class="small lollogo" title="League of Legends"><a href="/game/lol"></a></li>
+    <!-- <li class="small lollogo" title="League of Legends"><a href="/game/lol"></a></li> -->
     <li class="small bf4logo" title="Battlefield 4"><a href="/game/battlefield4"></a></li>
-    <!--<li class="small wslogo" title="Wildstar"><a href="/game/wildstar"></a></li>--> 
+    <li class="small wslogo" title="Wildstar"><a href="/game/wildstar"></a></li> 
     <!--<li class="small sclogo" title="Star Citizen"><a href="/game/starcitizen"></a></li>-->
   </ul>
 </header>
