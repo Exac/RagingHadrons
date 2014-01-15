@@ -6,7 +6,7 @@
     <head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title><?php if(isset(!$title)){echo "Raging Hadrons Professional Gaming";}else{echo $title;} ?></title>
+        <title><?php if(!isset($title)){echo "Raging Hadrons Professional Gaming";}else{echo $title;} ?></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
