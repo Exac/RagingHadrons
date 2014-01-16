@@ -32,7 +32,7 @@
 
 		<section class="half ll">
 		<p>Raging Hadrons is pleased to introduce our <strong>BUI</strong> design for Wildstar. We're going for minimalistic interface here, so <a href="mailto:bui@raginghadrons.com">let us know what you think</a>! </p>
-		<p></p>
+		<p>We can't wait for beta access to begin implementing the UI against the API!</p>
 		</section>
 	</div>
 </div>
