@@ -31,7 +31,7 @@
 		</section>
 
 		<section class="half ll">
-		<p>loreum ipsum ilor delorum.</p>
+		<p>Raging Hadrons is pleased to introduce our <strong>BUI</strong> design for Wildstar. We're going for minimalistic interface here, so <a href="mailto:bui@raginghadrons.com">let us know what you think</a>! </p>
 		</section>
 	</div>
 </div>
