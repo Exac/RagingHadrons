@@ -26,12 +26,13 @@
 
 	<div class="row">
 		<section class="half ll">
-		<a href="/upload/game/wildstar/sheep.jpg" target="_blank"><img alt="BUI" src="/upload/game/wildstar/bui.jpg"></a>
+		<a href="/upload/game/wildstar/bui.jpg" target="_blank"><img alt="BUI" src="/upload/game/wildstar/bui_small.jpg"></a>
 		<h1>Introducing BUI</h1>
 		</section>
 
 		<section class="half ll">
 		<p>Raging Hadrons is pleased to introduce our <strong>BUI</strong> design for Wildstar. We're going for minimalistic interface here, so <a href="mailto:bui@raginghadrons.com">let us know what you think</a>! </p>
+		<p></p>
 		</section>
 	</div>
 </div>
