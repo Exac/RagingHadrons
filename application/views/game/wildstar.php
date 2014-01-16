@@ -16,6 +16,9 @@
 	/* #53b3f0 */
 	/* #acfcff */
 }
+.bui{
+	padding: 0px;
+}
 
 </style>
 <div id="maingrid">
@@ -26,7 +29,7 @@
 
 	<div class="row">
 		<section class="half ll">
-		<a href="/upload/game/wildstar/bui.jpg" target="_blank"><img alt="BUI" src="/upload/game/wildstar/bui_small.jpg"></a>
+		<a href="/upload/game/wildstar/bui.jpg" target="_blank"><img class="bui" alt="BUI" src="/upload/game/wildstar/bui_small.jpg"></a>
 		<h1>Introducing BUI</h1>
 		</section>
 
