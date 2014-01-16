@@ -20,13 +20,14 @@
 </style>
 <div id="maingrid">
 	<section id="jumbotron">
-		<img src="/upload/game/wildstar/sheep.jpg" alt="TFW no Wildstar account to make addons on T_T" />
+		<a href="/upload/game/wildstar/sheep.jpg" target="new"><img src="/upload/game/wildstar/sheep.jpg" alt="TFW no Wildstar account to make addons on T_T" /></a>
 		<h1 class="gamename"><?php echo $game_name; ?></h1>
 	</section>
 
 	<div class="row">
 		<section class="half ll">
-		<p>loreum ipsum ilor delorum.<br/>E plurbis maximum kek.</p>
+		<img alt="BUI" src="/upload/game/wildstar/bui.jpg">
+		<h1>Introducing BUI</h1>
 		</section>
 
 		<section class="half ll">
