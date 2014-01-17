@@ -38,5 +38,11 @@
 		<p>We can't wait for beta access to begin implementing the UI against the API!</p>
 		</section>
 	</div>
+	<div class="row">
+	<section class="full ll">
+	<h2>Recruitment</h2>
+	<p>Wildstar brings back 40-man raiding, and you can be sure that we don't have a full roster right now! More information will be comming soon, so stay tuned!</p>
+	</section>
+	</div>
 </div>
 </section>
