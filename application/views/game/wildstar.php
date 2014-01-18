@@ -41,7 +41,7 @@
 	<div class="row">
 	<section class="full ll">
 	<h2>Recruitment</h2>
-	<p>Wildstar brings back 40-man raiding, and you can be sure that we don't have a full roster right now! More information will be comming soon, so stay tuned!</p>
+	<p>Wildstar brings back 40-player raiding, and you can be sure that we don't have a full roster right now! More information will be comming soon, so stay tuned!</p>
 	</section>
 	</div>
 </div>
