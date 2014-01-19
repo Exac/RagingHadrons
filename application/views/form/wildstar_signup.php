@@ -38,15 +38,20 @@
 			<?php if(isset($errors))echo $errors; ?>
 			</div>
 
-			<h5>Title</h5>
-			<input type="text" name="title" value="<?php echo set_value('title'); ?>" size="50" />
+			<h5>Character Name</h5>
+			<input type="text" name="character_name" value="<?php echo set_value('character_name'); ?>" size="50" />
 
-			<h5>Article</h5>
-			<textarea name="content"><?php echo set_value('content'); ?></textarea>
+			<h5>Character Class</h5>
+			<input type="text" name="character_name" value="<?php echo set_value('character_class'); ?>" size="50" />
+			<select name="character_class" form="carform">
+				<option value="esper">Esper</option>
+				<option value="spellslinger">Spellslinger</option>
+				<option value="engineer">Engineer</option>
+				<option value="medic">Medic</option>
+				<option value="stalker">Stalker</option>
+			</select>
 
-			<input type="hidden" value="<?php if(isset($user_id)){echo $user_id;}?>" name="user_id_confirm" />
-
-			<div><input type="submit" class="button" value="Submit News" /></div>
+			<div><input type="submit" class="button" value="Apply" /></div>
 
 			</form>
 
