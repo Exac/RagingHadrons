@@ -46,7 +46,7 @@ class m_form extends CI_Model {
 			$article_title = mysql_real_escape_string();
 			$article = mysql_real_escape_string();
 			$article_featured_image = "";
-			$query = $this->db->query("insert into news (author_id, article_title, article_date, article, article_featured_image) values ('{$author_id}', '{$article_title}', '', '{$article}', '{$article_featured_image');");
+			$query = $this->db->query("insert into news (author_id, article_title, article_date, article, article_featured_image) values ('{$author_id}', '{$article_title}', '', '{$article}', '{$article_featured_image}');");
 		}
 	}
 
