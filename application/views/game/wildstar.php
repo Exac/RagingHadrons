@@ -24,12 +24,15 @@
 <div id="maingrid">
 	<section id="jumbotron">
 		<img src="/upload/game/wildstar/sheep.jpg" alt="TFW no Wildstar account to make addons on T_T" />
+		<div class="excerpt"> <span class="postdate">January 19, 2014</span>
+			<p>Raging Hadrons is waiting for their beta key to begin our long awaited UI for the game!</p>
+		</div>
 		<h1>WILDSTAR</h1>
 	</section>
 
 	<div class="row">
 		<section class="half ll">
-		<a href="/upload/game/wildstar/bui.jpg" target="_blank"><img class="bui" alt="BUI" src="/upload/game/wildstar/bui_small.jpg"></a>
+		<a href="/upload/game/wildstar/bui.jpg" target="_blank"><img class="bui" alt="BUI" src="/upload/game/wildstar/bui_small.jpg"/></a>
 		</section>
 
 		<section class="half ll">
