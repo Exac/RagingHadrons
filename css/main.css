@@ -110,6 +110,12 @@ li a{
 	letter-spacing:1px;
 }
 
+p li a,
+p li{
+	display:inline;
+	width: inherit;
+}
+
 p a:before,
 span a:before,
 li a:before{

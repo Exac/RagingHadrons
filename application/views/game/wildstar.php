@@ -46,5 +46,19 @@
 	<p>Wildstar brings back 40-player raiding, and you can be sure that we don't have a full roster right now! More information will be comming soon, so stay tuned!</p>
 	</section>
 	</div>
+	<div class="row">
+	<section class="full ll">
+		<h2>Addon Writing Resources</h2>
+		<p>Wildstar addons are written in LUA, just as they were in wow, so here's some review.</p>
+		<p><ul>
+			<li><a href="http://lua-users.org/files/wiki_insecure/users/thomasl/luarefv51single.pdf" target="_blank" class="externalLink" rel="nofollow">Lua 5.1 Cheatsheet</a></li>
+			<li><a href="http://www.lua.org/pil/contents.html" target="_blank" class="externalLink" rel="nofollow">Programming in Lua (5.0 online)</a></li>
+			<li><a href="http://lua-users.org/wiki/TutorialDirectory" target="_blank" class="externalLink" rel="nofollow">lua-users wiki: Tutorials</a></li>
+			<li><a href="http://www.lua.org/manual/5.2/contents.html" target="_blank" class="externalLink" rel="nofollow">Lua 5.2 Reference Manual</a></li>
+			<li><a href="http://www.w3schools.com/xml/default.asp" target="_blank" class="externalLink" rel="nofollow">XML Tutorial</a></li>
+			<li><a href="http://www.lua.org/demo.html" target="_blank" class="externalLink" rel="nofollow">Running Lua snippets online</a></li>
+		</ul></p>
+	</section>
+	</div>
 </div>
 </section>
