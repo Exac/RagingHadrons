@@ -26,7 +26,7 @@
 		<img src="/upload/game/wildstar/sheep.jpg" alt="TFW no Wildstar account to make addons on T_T" />
 		<div class="excerpt"><p>Raging Hadrons is waiting for their beta key to begin our long awaited UI for the game!</p>
 		</div>
-		<h1>WILDSTAR</h1>
+		<h1><img src="/upload/game/wildstar/ws-main-logo.png" alt="WildStar-Online Logo" style="max-width:417px !important;" /></h1>
 	</section>
 
 	<div class="row">
