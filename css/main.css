@@ -32,6 +32,11 @@ body{
 	font-size: 1em;
     line-height: 1.4;
 }
+body,
+header{
+	background:#000000 url('/css/img/rh.jpg');
+	background-size:cover;
+}
 
 *{
 	-webkit-box-sizing: border-box;
@@ -269,6 +274,10 @@ header ul#links{
 header ul#games{
 	left:50%;
 	margin-left:142px;
+}
+header ul#games a:before,
+header ul#games a:after{
+	display: none;
 }
 .techbar{
 	width:100%;
@@ -719,7 +728,7 @@ footer{
 #recent_posts li{
 	padding:0px;
 	margin:3px 7px;
-	background:rgba(42, 25, 27, 1.0);
+	/*background:rgba(42, 25, 27, 1.0);*/
 }
 .ll li a,
 #recent_posts li a{
