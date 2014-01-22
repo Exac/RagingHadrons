@@ -5,14 +5,15 @@
 	width:100%;
 	max-width:100%;
 	z-index:-9;
-	position:absolute;
+	position:fixed;
 	top:0px;
 	background-image:url('/css/img/game_bg/<?php echo str_replace(' ', '', $game_name); ?>.jpg');
 	background-attachment:fixed;
 	background-position:top center;
 	background-repeat:no-repeat;
 	background-color:#000000;
-	margin:149px auto -149px auto;
+	/*margin:149px auto -149px auto;*/
+	margin:0px auto;
 }
 .gamecontent{
 	max-width:855px;
