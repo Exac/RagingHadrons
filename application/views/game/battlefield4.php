@@ -75,30 +75,5 @@
 				</ul>
 			</section>
 		</div>
-		<div class="row">
-			<section class="full ll">
-				<h2>Patch Notes</h2>
-				<ul>
-					<li>Various fixes for improving general stability</li>
-					<li>Fixed a memory leak issue occurring after level shutdowns, which could result in a out-of-memory crash in longer play sessions</li>
-					<li>Additional fix for the “sound loop” deadlock when running High/Ultra graphics settings</li>
-					<li>Added a warning for using Legacy AMD drivers that were out of date</li>
-					<li>Fixed a player feedback timing issue where blood was appearing before other damage indicators, and before damage was actually done</li>
-					<li>Fixed a bug where players’ rank icons on the scoreboard would not be updated</li>
-					<li>Fix for Asian users unable to start Battlefield 3 and Battlefield 4 on Windows 8.1</li>
-					<li>Normalized repair rates across all vehicles. Vehicles with lower health points, like aircraft and transport vehicles, now repair more slowly than before</li>
-					<li>Fixed problem with killer health in kill card not being correctly updated (showing 100% health even though the soldier was hurt)</li>
-					<li>Fix for friendly marker not always showing when needed to, resulting in players shooting team members</li>
-					<li>Fixed a bug where a M1 Abrams Coaxial HMG ammo box was occasionally blocking the driver’s camera</li>
-					<li>Increased damage by 25% for the Stealth Jet 20mm cannons.</li>
-					<li>Stealth Jets now have more similar handling attributes to each other. F35 &amp; J-20 are slightly more agile, Su-50 is less agile.</li>
-					<li>Attack Jets now have more similar handling attributes to each other, and all 3 are now slightly less agile than earlier</li>
-					<li>Fixed camera glitch when switching weapons while moving in crouch</li>
-					<li>Fixed an occasional bug where players could experience intermittent engine sound dropouts when driving wheeled IFVs</li>
-					<li>Fix for player spawning under the map when deploying on Lancang Dam</li>
-					<li>Fixed flickering in map and minimap on Rogue Transmission and Operation Locker</li>
-				</ul>
-			</section>
-		</div>
 	</div>
 </section>
