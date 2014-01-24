@@ -625,6 +625,17 @@ a img{outline:none;}
 	background-color:#e7efd6;
 }
 
+q.code{
+	background-color:rgba(166, 140, 122, 0.5);
+	color:rgb(184, 184, 184);
+	font-family: consolas, courier, monospace; 
+}
+q::selection,
+q::-moz-selection{
+	background-color:red;
+	color:#ffffff;
+}
+
 div.row{
 	clear:both !important;
 	clear:both;
