@@ -12,10 +12,6 @@
 		position: absolute;
 		bottom:0px;
 	}
-	.battlefield .panel{
-		/* #53b3f0 */
-		/* #acfcff */
-	}
 	.bui{
 		padding: 0px;
 	}
