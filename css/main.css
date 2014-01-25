@@ -657,6 +657,7 @@ div.row:after{
 #maingrid section.full,
 #maingrid section.half, 
 #maingrid section.third,
+#maingrid section.twothirds,
 #maingrid section.quarter{
 	border:1px solid rgb(48,48,48);
 	background: rgba(42,25,27,0.75);
@@ -671,16 +672,18 @@ div.row:after{
 
 section.full{width:100%;max-width:100%;}
 section.half{width:50%;max-width:50%;}
-section.third{width:33.25%;max-width:33.25%;}
+section.third{width:33.3%;max-width:33.3%;}
+section.twothirds{width:66.6%;max-width:66.6%;}
 section.quarter{width:25%;max-width:25%;}
 
 section.full{width:100%;max-width:100%;}
 section.half{width:calc(50% - 5px);max-width:calc(50% - 5px);}
 section.third{width:calc(33.335% - 2.5px);max-width:calc(33.335% - 2.5px);}
+section.twothirds{width:calc(66.66% - 7.5px);max-width:calc(66.6% - 7.5px);}
 section.quarter{width:calc(25% - 7.5px);max-width:calc(25% - 7.5px);}
 
 @media only screen and (max-width: 450px) {
-	section.full, section.half, section.quarter, section.third{
+	section.full, section.half, section.quarter, section.third, section.twothirds{
 		width:100% !important;
 		max-width:100% !important;
 		margin:0px;
