@@ -14,28 +14,64 @@ blockquote{
 	background:black;
 	border-radius:0px;
 	color:#53b3f0;
-	margin:0px auto 50px auto;
+	margin:10px 0px;
 	width:100%;
 	line-height:2em;
 }
 blockquote ul{
 	margin-top:0px;
 }
+#jumbotron{
+	height:480px;
+}
+#jumbotron h1{
+	background-image: none;
+}
+div.row section.ll{
+	color:#ffffff;
+	background-image:none;
+	background-color:rgb(0,0,0);
+	background-color: rgba(0,0,0,0.65);
+	border-color: #202e2e;
+}
 </style>
-<section>
+<section id="maingrid">
+	<section id="jumbotron">
+		<img src="/upload/game/starcraft2/zeffeus_killdynamite_blizzcon.jpg" alt="Killdynamite &amp Zeffeus." />
+		<div class="excerpt">
+			<p>GoSu Zeffeus &amp; KillDynamite at BlizzCon 2014.</p>
+		</div>
+			<h1></h1>
+		</div>
+	</section>
 	
-	<h1 class="gamename"><?php echo $game_name; ?></h1>
-	<img src="/upload/game/starcraft2/wcs_2014_format.jpg" alt="WCS 2014 Format" />
-	<blockquote>
-	<ul>
-		<li>A linear, easier to understand schedule that allows more room for third-party tournaments</li>
-		<li>The return of GSL, with more prize money funneled into the Korea region</li>
-		<li>A partial region lock, where the bulk of qualifier spots are reserved for players from the home region</li>
-		<li>More WCS Global Events with partner tournaments , for additional competition and opportunities for players</li>
-		<li>More emphasis on regional play, with additional points and prize money for Premier League players compared to 2013</li>
-	</ul>
-	<a class="button" href="http://wcs.battle.net/sc2/en/about" title="About StarCraft II World Championship Series 2014">Source</a>
-	</blockquote>
+	<div class="row">
+		<section class="twothirds ll">
+			<img src="/upload/game/starcraft2/wcs_2014_format.jpg" alt="WCS 2014 Format" />
+			<blockquote>
+				<ul>
+					<li>A linear, easier to understand schedule that allows more room for third-party tournaments</li>
+					<li>The return of GSL, with more prize money funneled into the Korea region</li>
+					<li>A partial region lock, where the bulk of qualifier spots are reserved for players from the home region</li>
+					<li>More WCS Global Events with partner tournaments , for additional competition and opportunities for players</li>
+					<li>More emphasis on regional play, with additional points and prize money for Premier League players compared to 2013</li>
+				</ul>
+				<a class="button" href="http://wcs.battle.net/sc2/en/about" title="About StarCraft II World Championship Series 2014">Source</a>
+			</blockquote>
+		</section>
+
+		<section class="third ll">
+			<h2>BlizzCon</h2>
+			<p>After a long tournament eventually won by <em>sOs</em>, Raging Hadrons took away a tonne of information and strategies. In preparation for the 2014 World Cup qualifiers, Raging Hadrons are training in the team house in Austin, Texas. You can help us out by keeping up with our Twitch.tv channels, follow on!</p>
+			<a href="/upload/game/starcraft2/win_at_blizzcon_large.jpg"><img alt="BlizzCon PCs are sweet." src="/upload/game/starcraft2/win_at_blizzcon.jpg" /></a>
+			<p>Additionally, Zeffeus, Killdynamite, Exact &amp; Epuration tried their hands at Blizzard's newest game, <em>Heroes of the Storm&trade;</em>. It looks like the future of MOBAs.</p>
+		</section>
+	</div>
+
+	<div class="row">
+		<section class="half ll"><img alt="HotS loading..." src="/upload/game/starcraft2/hots_match_blizzcon.jpg"></section>
+		<section class="half ll"><img alt="HotS victory..." src="/upload/game/starcraft2/hots_victory_blizzcon.jpg"></section>
+	</div>
 </section>
 
 </section>
