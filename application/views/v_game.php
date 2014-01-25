@@ -10,12 +10,11 @@
 	background-image:url('/css/img/game_bg/<?php echo str_replace(' ', '', $game_name); ?>.jpg');
 	background-attachment:fixed;
 	background-position:top center;
-	background-size: 100% 100%;
+	background-repeat:no-repeat;
 	background-color:#000000;
 	/*margin:149px auto -149px auto;*/
 	margin:0px auto;
 }
-
 .gamecontent{
 	max-width:855px;
 	margin:0px auto;
