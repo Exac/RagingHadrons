@@ -24,7 +24,7 @@
 <div id="maingrid">
 	<!-- <section id="jumbotron">
 		<img src="/upload/game/wildstar/sheep.jpg" alt="TFW no Wildstar account to make addons on T_T" />
-		<h1>WILDSTAR</h1>
+		<h1>WILDSTAR</h1> 
 	</section> -->
 
 	<div class="row">
