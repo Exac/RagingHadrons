@@ -7,9 +7,9 @@ class M_maingrid_factory extends CI_Model
 		parent::__construct();
 	}
 	
-	public function test($test)
+	public function get_news_list($item_quantity)
 	{
-		return "<h1>{$test}</h1>";
+		return "";
 	}
 }
 
