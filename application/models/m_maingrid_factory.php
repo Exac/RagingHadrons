@@ -11,6 +11,12 @@ class M_maingrid_factory extends CI_Model
 	{
 		return "";
 	}
+
+	public function get_posts_list($item_quantity)
+	{
+		return "";
+	}
+
 }
 
 ?>
