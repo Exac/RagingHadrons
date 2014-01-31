@@ -7,12 +7,12 @@ class M_maingrid_factory extends CI_Model
 		parent::__construct();
 	}
 	
-	public function get_news_list($item_quantity)
+	public function get_news_list($item_quantity = 7)
 	{
 		return "";
 	}
 
-	public function get_posts_list($item_quantity)
+	public function get_posts_list($item_quantity = 4)
 	{
 		return "";
 	}
