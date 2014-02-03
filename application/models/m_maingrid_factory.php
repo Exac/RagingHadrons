@@ -27,7 +27,20 @@ class M_maingrid_factory extends CI_Model
 
 	public function get_posts_list($item_quantity = 4)
 	{
-		return "";
+		$post_list = "";
+		$query = $this->db->query("select article_id, article_title from news order by article_date desc limit 7");
+		if($query->num_rows() > 0)
+		{
+			foreach($query->result() as $row)
+			{
+				$post_list .= "<li><a href='/forum/post/"
+						   .$row['post_id']
+						   ."'>"
+						   .$row['title']
+						   ."</a></li>\n";
+			}
+		}
+		return $post_list;
 	}
 
 }
