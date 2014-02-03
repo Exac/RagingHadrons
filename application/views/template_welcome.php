@@ -14,10 +14,6 @@
       <h2>Recent Posts</h2>
       <ul>
         <?php echo $posts; ?>
-        <!-- <li><a href="#money">Is it “wrong” to enjoy anime in the west?</a></li>
-        <li><a href="http://localhost">Top 3 Junglers to master climb from Diamond II</a></li>
-        <li><a href="http://127.0.0.1">Do you have a favourite number?</a></li>
-        <li><a href="">Equality Minister says rape victims can be equally responsible.</a></li> -->
       </ul>
     </section>
     <section id="news" class="half ll">
@@ -25,14 +21,6 @@
       <h2>News</h2>
       <ul>
         <?php echo $news; ?>
-        <!-- <li><a href="">WCS Europe Challenger League Group F Results</a></li>
-        <li><a href="">BlizzCon Calendar</a></li>
-        <li><a href="">1 Month Count-Down to Worlds</a></li>
-        <li><a href="">Taeja wins $20,000 in Korea</a></li>
-        <li><a href="">CocaCola Gaming giveaway with Raging Hadrons</a></li>
-        <li><a href="">LOL World championships Analysis</a></li>
-        <li><a href="">Patch 5.4 changes to arena meta by RH.KillDynamite</a></li>
-        <li><a href="">Candy Crush level 64 TIPs from RH.Epuration</a></li> -->
       </ul>
     </section>
     <section id="streams" class="quarter ll" onClick="getStreamList()">
