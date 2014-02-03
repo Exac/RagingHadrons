@@ -23,7 +23,10 @@ class C_index extends CI_Controller {
 		
 		$this->load->model('M_maingrid_factory', '', TRUE);#load database too
 		
-		$this->load->view('template_welcome');
+		$data['posts'] = $this->M_maingrid_factory->get_posts_list();
+		$data['news'] = $this->M_maingrid_factory->get_news_list();
+
+		$this->load->view('template_welcome', $data);
 		$this->load->view('v_temp_foot');
 	}
 	
