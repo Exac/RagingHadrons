@@ -6,6 +6,7 @@
 	<?php else: ?>
 	<a href="/auth/logout">Logout</a>
 	<?php endif; ?>
+	<a href="">Register</a>
 </footer>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
