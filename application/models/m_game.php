@@ -11,22 +11,22 @@ class M_game extends CI_Model
 	{
 		switch ($game_name) {
 			case ($game_name == str_replace(' ', '', "Starcraft2")):
-				return "/*sc2 css */";
+				return "";/*sc2 css */
 				break;
 			case ($game_name == str_replace(' ', '', "Dota2")):
-				return "/*dota2 css */";
+				return "";/*dota2 css */
 				break;
 			case ($game_name == str_replace(' ', '', "Battlefield4")):
-				return "/*bf4 css */";
+				return "";/*bf4 css */
 				break;
 			case ($game_name == str_replace(' ', '', "LOL")):
-				return "/*lol css */";
+				return "";/*lol css */
 				break;
 			case ($game_name == str_replace(' ', '', "Wildstar")):
-				return "/*ws css */";
+				return "";/*ws css */
 				break;
 			case ($game_name == str_replace(' ', '', "StarCitizen")):
-				return "/*ss css */";
+				return "";/*ss css */
 				break;
 		}
 	}
