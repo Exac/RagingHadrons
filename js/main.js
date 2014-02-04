@@ -72,7 +72,7 @@ function normalizeRowHeight() {
 				}
 				
 			});
-			$(v).children("section").css('height', rowHeight + 2);
+			$(v).children("section").css('height', rowHeight + 4); //must be 0.25em more than font-size
 		});	
 	}
 	checkStreamZero();
