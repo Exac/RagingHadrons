@@ -661,7 +661,8 @@ div.row:after{
 #maingrid section.twothirds,
 #maingrid section.quarter{
 	border:1px solid rgb(48,48,48);
-	background: rgba(42,25,27,0.75);
+	background-color: rgb(42,25,27);
+	background-color: rgba(42,25,27,0.75);
 	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75); 
 	margin:10px 10px 0px 0px;
@@ -702,7 +703,8 @@ section.quarter{width:calc(25% - 7.5px);max-width:calc(25% - 7.5px);}
 #maingrid section p, 
 #maingrid section img{
 	width:100%;
-	padding:0px;
+	padding-top:0px;
+	padding-bottom:0px;
 }
 #maingrid section:hover{
 	
@@ -733,6 +735,16 @@ footer{
 	height:95px;
 	width:100%;
 	background-position:center;;
+	margin-bottom:-1.7em; /* defined in body line-height as 1.4em*/
+
+}
+
+.ll h2:first-of-type{
+	margin-top:0px !important;
+	padding:0px 0.4em !important;
+	display:inline;
+	background-color: rgb(42,25,27);
+	background-color: rgba(42,25,27,0.75);
 }
 
 .ll ul,
