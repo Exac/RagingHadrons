@@ -31,12 +31,12 @@
     </section>
   </div>
   <div class="row">
-    <section id="about" class="half">
+    <section id="about" class="half ll">
       <div class="bdlds2"></div>
       <h2>About</h2>
       <p>Raging Hadrons was founded as a Starcraft II team by six professional World of Warcraft players in 2008. Now, with a roster of 26 professional gamers spanning four games Raging Hadrons is one of the top North American teams.</p>
     </section>
-    <section id="roster" class="half">
+    <section id="roster" class="half ll">
       <div class="d2"></div>
       <h2>Roster</h2>
       <ul>
